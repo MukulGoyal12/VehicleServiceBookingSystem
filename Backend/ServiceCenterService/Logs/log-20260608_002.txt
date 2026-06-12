@@ -1,0 +1,8 @@
+2026-06-08 10:17:29.021 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-08 10:17:29.042 +05:30 [INF] Hosting environment: Development
+2026-06-08 10:17:29.045 +05:30 [INF] Content root path: C:\Users\2492274\OneDrive - Cognizant\Desktop\Project\ServiceCenterService
+2026-06-08 10:18:57.786 +05:30 [INF] User profile is available. Using 'C:\Users\2492274\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-08 10:18:58.037 +05:30 [INF] Now listening on: http://localhost:5268
+2026-06-08 10:19:00.650 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5268/weatherforecast - null null
+2026-06-08 10:19:01.572 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5268/weatherforecast - 404 null null 924.6268ms
+2026-06-08 10:19:01.591 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5268/weatherforecast, Response status code: 404

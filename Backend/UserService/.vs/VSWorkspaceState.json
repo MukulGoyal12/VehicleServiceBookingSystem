@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\UserService",
+    "\\UserService\\Controllers",
+    "\\UserService\\Middleware",
+    "\\UserService\\Migrations",
+    "\\UserService\\Models",
+    "\\UserService\\obj",
+    "\\UserService\\Properties",
+    "\\UserService\\Repository",
+    "\\UserService\\Services"
+  ],
+  "PreviewInSolutionExplorer": false
+}

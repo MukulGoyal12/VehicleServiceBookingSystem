@@ -1,0 +1,19 @@
+2026-06-02 17:04:56.653 +05:30 [INF] User profile is available. Using 'C:\Users\2492327\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-02 17:04:57.381 +05:30 [INF] Now listening on: http://localhost:5167
+2026-06-02 17:04:57.567 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-02 17:04:57.570 +05:30 [INF] Hosting environment: Development
+2026-06-02 17:04:57.572 +05:30 [INF] Content root path: C:\Project\vehicleservicemanagementsystem\BookingService
+2026-06-02 17:05:01.712 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5167/ - null null
+2026-06-02 17:05:02.747 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5167/ - 404 null null 1062.6786ms
+2026-06-02 17:05:02.775 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5167/, Response status code: 404
+2026-06-02 17:07:12.365 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5167/api/Bookings/create-booking - application/json 81
+2026-06-02 17:07:12.593 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01-06-2026 13:24:16', Current time (UTC): '02-06-2026 11:37:12'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-06-02 17:07:12.688 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01-06-2026 13:24:16', Current time (UTC): '02-06-2026 11:37:12'.
+2026-06-02 17:07:12.697 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-06-02 17:07:12.709 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-02 17:07:12.712 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5167/api/Bookings/create-booking - 401 0 null 347.5907ms

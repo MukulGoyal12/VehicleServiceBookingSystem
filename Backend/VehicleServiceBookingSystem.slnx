@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="BookingService/BookingService.csproj" />
+  <Project Path="Gateway/Gateway.csproj" Id="dc02642d-26f3-4da6-b415-da429e519c43" />
+  <Project Path="OwnerService/OwnerService.csproj" Id="a48fc400-af7c-4e0b-9693-5fae0d6eeee7" />
+  <Project Path="ServiceCenterService/ServiceCenterService.csproj" Id="eb50a86c-df3d-499e-816a-298d20dc9a34" />
+  <Project Path="UserService/UserService/UserService.csproj" />
+  <Project Path="VehicleBookingSystem.Tests/VehicleBookingSystem.Tests.csproj" Id="819d60af-0216-4c9a-a6cb-2d3ed739fe06" />
+  <Project Path="VehicleService/VehicleService.csproj" />
+</Solution>

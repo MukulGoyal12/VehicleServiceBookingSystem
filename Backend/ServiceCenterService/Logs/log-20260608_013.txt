@@ -1,0 +1,28 @@
+2026-06-08 12:54:59.028 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-08 12:54:59.042 +05:30 [INF] Hosting environment: Development
+2026-06-08 12:54:59.044 +05:30 [INF] Content root path: C:\Users\2492274\OneDrive - Cognizant\Desktop\Project\ServiceCenterService
+2026-06-08 18:13:13.278 +05:30 [INF] User profile is available. Using 'C:\Users\2492274\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-08 18:13:13.737 +05:30 [INF] Now listening on: http://localhost:5268
+2026-06-08 18:13:14.934 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5268/weatherforecast - null null
+2026-06-08 18:13:15.937 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5268/weatherforecast - 404 null null 1016.883ms
+2026-06-08 18:13:15.966 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5268/weatherforecast, Response status code: 404
+2026-06-08 18:13:22.780 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5268/api/servicecenter/deleteByOwner/Nan_003 - null null
+2026-06-08 18:13:22.792 +05:30 [INF] Executing endpoint 'ServiceCenterService.Controllers.ServiceCenterController.DeleteByOwner (ServiceCenterService)'
+2026-06-08 18:13:22.875 +05:30 [INF] Route matched with {action = "DeleteByOwner", controller = "ServiceCenter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteByOwner(System.String) on controller ServiceCenterService.Controllers.ServiceCenterController (ServiceCenterService).
+2026-06-08 18:13:25.170 +05:30 [INF] Executed DbCommand (101ms) [Parameters=[@__ownerId_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[ServiceCenterID], [s].[Contact], [s].[Location], [s].[Name], [s].[OwnerId], [s].[ServiceDescription]
+FROM [ServiceCenters] AS [s]
+WHERE [s].[OwnerId] = @__ownerId_0
+2026-06-08 18:13:25.485 +05:30 [INF] Executed DbCommand (38ms) [Parameters=[@p0='?' (Size = 20) (DbType = AnsiString), @p1='?' (Size = 20) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [ServiceCenters]
+OUTPUT 1
+WHERE [ServiceCenterID] = @p0;
+DELETE FROM [ServiceCenters]
+OUTPUT 1
+WHERE [ServiceCenterID] = @p1;
+2026-06-08 18:13:25.546 +05:30 [INF] All service centers deleted for OwnerId Nan_003
+2026-06-08 18:13:25.561 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-08 18:13:25.586 +05:30 [INF] Executed action ServiceCenterService.Controllers.ServiceCenterController.DeleteByOwner (ServiceCenterService) in 2702.0281ms
+2026-06-08 18:13:25.591 +05:30 [INF] Executed endpoint 'ServiceCenterService.Controllers.ServiceCenterController.DeleteByOwner (ServiceCenterService)'
+2026-06-08 18:13:25.603 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5268/api/servicecenter/deleteByOwner/Nan_003 - 200 null application/json; charset=utf-8 2823.8134ms

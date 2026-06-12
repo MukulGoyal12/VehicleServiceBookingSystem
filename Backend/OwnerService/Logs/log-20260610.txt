@@ -1,0 +1,75 @@
+2026-06-10 11:33:07.821 +05:30 [INF] Now listening on: http://localhost:5242
+2026-06-10 11:33:08.146 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-10 11:33:08.156 +05:30 [INF] Hosting environment: Development
+2026-06-10 11:33:08.158 +05:30 [INF] Content root path: C:\Users\2492274\OneDrive - Cognizant\Desktop\Project\OwnerService
+2026-06-10 11:33:10.797 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5242/weatherforecast - null null
+2026-06-10 11:33:12.123 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5242/weatherforecast - 404 null null 1352.0331ms
+2026-06-10 11:33:12.223 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5242/weatherforecast, Response status code: 404
+2026-06-10 11:35:26.818 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5242/api/owner/login - application/json 118
+2026-06-10 11:35:26.896 +05:30 [INF] Executing endpoint 'OwnerService.Controllers.OwnerController.Login (OwnerService)'
+2026-06-10 11:35:27.014 +05:30 [INF] Route matched with {action = "Login", controller = "Owner"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(OwnerService.Models.LoginModel) on controller OwnerService.Controllers.OwnerController (OwnerService).
+2026-06-10 11:35:27.759 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-06-10 11:35:27.861 +05:30 [INF] Executed action OwnerService.Controllers.OwnerController.Login (OwnerService) in 822.7784ms
+2026-06-10 11:35:27.870 +05:30 [INF] Executed endpoint 'OwnerService.Controllers.OwnerController.Login (OwnerService)'
+2026-06-10 11:35:27.885 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5242/api/owner/login - 400 null application/problem+json; charset=utf-8 1078.3167ms
+2026-06-10 11:35:36.771 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5242/api/owner/register - application/json 118
+2026-06-10 11:35:36.778 +05:30 [INF] Executing endpoint 'OwnerService.Controllers.OwnerController.Register (OwnerService)'
+2026-06-10 11:35:36.782 +05:30 [INF] Route matched with {action = "Register", controller = "Owner"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(OwnerService.DTO.OwnerDTO) on controller OwnerService.Controllers.OwnerController (OwnerService).
+2026-06-10 11:35:38.752 +05:30 [INF] Executed DbCommand (108ms) [Parameters=[@__owner_Email_0='?' (Size = 150)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[OwnerId], [o].[Email], [o].[Name], [o].[PasswordHash], [o].[Phone], [o].[ServiceCenterIds]
+FROM [Owners] AS [o]
+WHERE [o].[Email] = @__owner_Email_0
+2026-06-10 11:35:39.397 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Owners] AS [o]
+2026-06-10 11:35:39.587 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 20) (DbType = AnsiString), @p1='?' (Size = 150), @p2='?' (Size = 100), @p3='?' (Size = 256), @p4='?' (Size = 10) (DbType = AnsiString), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Owners] ([OwnerId], [Email], [Name], [PasswordHash], [Phone], [ServiceCenterIds])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-06-10 11:35:39.599 +05:30 [INF] Owner nandug756@gmail.com registered successfully at "2026-06-10T06:05:39.5993935Z"
+2026-06-10 11:35:39.603 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-10 11:35:39.609 +05:30 [INF] Executed action OwnerService.Controllers.OwnerController.Register (OwnerService) in 2824.4041ms
+2026-06-10 11:35:39.613 +05:30 [INF] Executed endpoint 'OwnerService.Controllers.OwnerController.Register (OwnerService)'
+2026-06-10 11:35:39.624 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5242/api/owner/register - 200 null application/json; charset=utf-8 2853.6554ms
+2026-06-10 11:36:02.038 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5242/api/owner/login - application/json 63
+2026-06-10 11:36:02.046 +05:30 [INF] Executing endpoint 'OwnerService.Controllers.OwnerController.Login (OwnerService)'
+2026-06-10 11:36:02.049 +05:30 [INF] Route matched with {action = "Login", controller = "Owner"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(OwnerService.Models.LoginModel) on controller OwnerService.Controllers.OwnerController (OwnerService).
+2026-06-10 11:36:02.095 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__login_Email_0='?' (Size = 150)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[OwnerId], [o].[Email], [o].[Name], [o].[PasswordHash], [o].[Phone], [o].[ServiceCenterIds]
+FROM [Owners] AS [o]
+WHERE [o].[Email] = @__login_Email_0
+2026-06-10 11:36:02.099 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-10 11:36:02.101 +05:30 [INF] Executed action OwnerService.Controllers.OwnerController.Login (OwnerService) in 50.1278ms
+2026-06-10 11:36:02.104 +05:30 [INF] Executed endpoint 'OwnerService.Controllers.OwnerController.Login (OwnerService)'
+2026-06-10 11:36:02.107 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5242/api/owner/login - 401 null application/json; charset=utf-8 72.9499ms
+2026-06-10 11:36:11.919 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5242/api/owner/login - application/json 63
+2026-06-10 11:36:11.923 +05:30 [INF] Executing endpoint 'OwnerService.Controllers.OwnerController.Login (OwnerService)'
+2026-06-10 11:36:11.925 +05:30 [INF] Route matched with {action = "Login", controller = "Owner"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(OwnerService.Models.LoginModel) on controller OwnerService.Controllers.OwnerController (OwnerService).
+2026-06-10 11:36:12.008 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__login_Email_0='?' (Size = 150)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[OwnerId], [o].[Email], [o].[Name], [o].[PasswordHash], [o].[Phone], [o].[ServiceCenterIds]
+FROM [Owners] AS [o]
+WHERE [o].[Email] = @__login_Email_0
+2026-06-10 11:36:12.423 +05:30 [INF] Owner nandug756@gmail.com logged in successfully at "2026-06-10T06:06:12.4235853Z"
+2026-06-10 11:36:12.426 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-10 11:36:12.431 +05:30 [INF] Executed action OwnerService.Controllers.OwnerController.Login (OwnerService) in 502.8675ms
+2026-06-10 11:36:12.434 +05:30 [INF] Executed endpoint 'OwnerService.Controllers.OwnerController.Login (OwnerService)'
+2026-06-10 11:36:12.437 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5242/api/owner/login - 200 null application/json; charset=utf-8 518.1839ms
+2026-06-10 11:37:25.221 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5242/api/owner/addServiceCenter - application/json; charset=utf-8 null
+2026-06-10 11:37:25.227 +05:30 [INF] Executing endpoint 'OwnerService.Controllers.OwnerController.AddServiceCenter (OwnerService)'
+2026-06-10 11:37:25.230 +05:30 [INF] Route matched with {action = "AddServiceCenter", controller = "Owner"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddServiceCenter(ServiceCenterService.DTO.AddServiceCenterDTO) on controller OwnerService.Controllers.OwnerController (OwnerService).
+2026-06-10 11:37:25.255 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__payload_OwnerId_0='?' (Size = 20) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[OwnerId], [o].[Email], [o].[Name], [o].[PasswordHash], [o].[Phone], [o].[ServiceCenterIds]
+FROM [Owners] AS [o]
+WHERE [o].[OwnerId] = @__payload_OwnerId_0
+2026-06-10 11:37:25.280 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@p1='?' (Size = 20) (DbType = AnsiString), @p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Owners] SET [ServiceCenterIds] = @p0
+OUTPUT 1
+WHERE [OwnerId] = @p1;
+2026-06-10 11:37:25.284 +05:30 [INF] ServiceCenter Sir_004 linked to Owner Nan_003
+2026-06-10 11:37:25.287 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-10 11:37:25.289 +05:30 [INF] Executed action OwnerService.Controllers.OwnerController.AddServiceCenter (OwnerService) in 53.7019ms
+2026-06-10 11:37:25.293 +05:30 [INF] Executed endpoint 'OwnerService.Controllers.OwnerController.AddServiceCenter (OwnerService)'
+2026-06-10 11:37:25.294 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5242/api/owner/addServiceCenter - 200 null application/json; charset=utf-8 73.9517ms

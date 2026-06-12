@@ -1,0 +1,45 @@
+2026-06-08 10:18:58.356 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-08 10:18:58.380 +05:30 [INF] Hosting environment: Development
+2026-06-08 10:18:58.383 +05:30 [INF] Content root path: C:\Users\2492274\OneDrive - Cognizant\Desktop\Project\ServiceCenterService
+2026-06-08 10:35:03.292 +05:30 [INF] Executed DbCommand (597ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [ServiceCenterDb];
+2026-06-08 10:35:03.717 +05:30 [INF] Executed DbCommand (304ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [ServiceCenterDb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2026-06-08 10:35:03.749 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-06-08 10:35:03.883 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2026-06-08 10:35:03.886 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-06-08 10:35:03.915 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-06-08 10:35:03.940 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-06-08 10:35:03.968 +05:30 [INF] Applying migration '20260608050452_serviceCenter'.
+2026-06-08 10:35:04.008 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ServiceCenters] (
+    [ServiceCenterID] varchar(20) NOT NULL,
+    [Name] nvarchar(100) NOT NULL,
+    [Location] nvarchar(100) NOT NULL,
+    [Contact] varchar(10) NOT NULL,
+    [OwnerId] nvarchar(max) NOT NULL,
+    [ServiceDescription] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_ServiceCenters] PRIMARY KEY ([ServiceCenterID])
+);
+2026-06-08 10:35:04.015 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20260608050452_serviceCenter', N'8.0.26');
+2026-06-08 10:35:58.647 +05:30 [INF] User profile is available. Using 'C:\Users\2492274\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-08 10:35:59.205 +05:30 [INF] Now listening on: http://localhost:5268
+2026-06-08 10:36:01.225 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5268/weatherforecast - null null
+2026-06-08 10:36:01.867 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5268/weatherforecast - 404 null null 645.3162ms
+2026-06-08 10:36:01.905 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5268/weatherforecast, Response status code: 404

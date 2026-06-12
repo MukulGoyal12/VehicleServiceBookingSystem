@@ -1,0 +1,825 @@
+2026-06-08 10:13:37.282 +05:30 [INF] Now listening on: http://localhost:5000
+2026-06-08 10:13:38.162 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-08 10:13:38.185 +05:30 [INF] Hosting environment: Development
+2026-06-08 10:13:38.208 +05:30 [INF] Content root path: C:\Users\2492274\OneDrive - Cognizant\Desktop\Project\Gateway
+2026-06-08 10:13:41.441 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-06-08 10:13:42.203 +05:30 [WRN] RequestId: 0HNM5320LS70V:00000001, PreviousRequestId: -
+DownstreamRouteFinderMiddleware setting pipeline errors because DownstreamRouteFinder returned the following ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+2026-06-08 10:13:42.209 +05:30 [WRN] RequestId: 0HNM5320LS70V:00000001, PreviousRequestId: -
+ResponderMiddleware found 1 error ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+Setting error response for request: GET /
+2026-06-08 10:13:42.253 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 null null 816.4857ms
+2026-06-08 10:13:45.637 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/owner - application/json 62
+2026-06-08 10:13:45.684 +05:30 [INF] RequestId: 0HNM5320LS710:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 10:13:45.689 +05:30 [INF] RequestId: 0HNM5320LS710:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner' in the route /owner/{everything}.
+2026-06-08 10:13:45.866 +05:30 [WRN] RequestId: 0HNM5320LS710:00000001, PreviousRequestId: -
+500 Internal Server Error status code of request URI: http://localhost:5242/api/owner
+2026-06-08 10:13:45.894 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/owner - 500 null text/plain; charset=utf-8 257.6894ms
+2026-06-08 10:13:45.902 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/owner, Response status code: 500
+2026-06-08 10:13:48.286 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/owner - application/json 62
+2026-06-08 10:13:48.295 +05:30 [INF] RequestId: 0HNM5320LS711:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 10:13:48.299 +05:30 [INF] RequestId: 0HNM5320LS711:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner' in the route /owner/{everything}.
+2026-06-08 10:13:48.340 +05:30 [WRN] RequestId: 0HNM5320LS711:00000001, PreviousRequestId: -
+500 Internal Server Error status code of request URI: http://localhost:5242/api/owner
+2026-06-08 10:13:48.344 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/owner - 500 null text/plain; charset=utf-8 57.9389ms
+2026-06-08 10:13:48.350 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/owner, Response status code: 500
+2026-06-08 10:14:16.455 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/owner - application/json 62
+2026-06-08 10:14:16.467 +05:30 [INF] RequestId: 0HNM5320LS712:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 10:14:16.469 +05:30 [INF] RequestId: 0HNM5320LS712:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner' in the route /owner/{everything}.
+2026-06-08 10:14:16.519 +05:30 [WRN] RequestId: 0HNM5320LS712:00000001, PreviousRequestId: -
+500 Internal Server Error status code of request URI: http://localhost:5242/api/owner
+2026-06-08 10:14:16.527 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/owner - 500 null text/plain; charset=utf-8 71.764ms
+2026-06-08 10:14:16.540 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/owner, Response status code: 500
+2026-06-08 10:15:51.335 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner - application/json 135
+2026-06-08 10:15:51.345 +05:30 [INF] RequestId: 0HNM5320LS713:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 10:15:51.347 +05:30 [INF] RequestId: 0HNM5320LS713:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner' in the route /owner/{everything}.
+2026-06-08 10:15:51.425 +05:30 [WRN] RequestId: 0HNM5320LS713:00000001, PreviousRequestId: -
+405 Method Not Allowed status code of request URI: http://localhost:5242/api/owner
+2026-06-08 10:15:51.431 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner - 405 0 null 99.6109ms
+2026-06-08 10:15:51.454 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner, Response status code: 405
+2026-06-08 10:17:29.116 +05:30 [INF] Now listening on: http://localhost:5000
+2026-06-08 10:17:29.711 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-08 10:17:29.715 +05:30 [INF] Hosting environment: Development
+2026-06-08 10:17:29.718 +05:30 [INF] Content root path: C:\Users\2492274\OneDrive - Cognizant\Desktop\Project\Gateway
+2026-06-08 10:17:31.027 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-06-08 10:17:31.586 +05:30 [WRN] RequestId: 0HNM5345Q5ISC:00000001, PreviousRequestId: -
+DownstreamRouteFinderMiddleware setting pipeline errors because DownstreamRouteFinder returned the following ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+2026-06-08 10:17:31.598 +05:30 [WRN] RequestId: 0HNM5345Q5ISC:00000001, PreviousRequestId: -
+ResponderMiddleware found 1 error ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+Setting error response for request: GET /
+2026-06-08 10:17:31.655 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 null null 630.5295ms
+2026-06-08 10:18:57.919 +05:30 [INF] Now listening on: http://localhost:5000
+2026-06-08 10:18:58.219 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-08 10:18:58.222 +05:30 [INF] Hosting environment: Development
+2026-06-08 10:18:58.225 +05:30 [INF] Content root path: C:\Users\2492274\OneDrive - Cognizant\Desktop\Project\Gateway
+2026-06-08 10:18:59.767 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-06-08 10:19:01.507 +05:30 [WRN] RequestId: 0HNM535073K5B:00000001, PreviousRequestId: -
+DownstreamRouteFinderMiddleware setting pipeline errors because DownstreamRouteFinder returned the following ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+2026-06-08 10:19:01.534 +05:30 [WRN] RequestId: 0HNM535073K5B:00000001, PreviousRequestId: -
+ResponderMiddleware found 1 error ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+Setting error response for request: GET /
+2026-06-08 10:19:01.588 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 null null 1901.1255ms
+2026-06-08 10:36:00.614 +05:30 [INF] Now listening on: http://localhost:5000
+2026-06-08 10:36:01.227 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-08 10:36:01.233 +05:30 [INF] Hosting environment: Development
+2026-06-08 10:36:01.238 +05:30 [INF] Content root path: C:\Users\2492274\OneDrive - Cognizant\Desktop\Project\Gateway
+2026-06-08 10:36:02.722 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-06-08 10:36:03.192 +05:30 [WRN] RequestId: 0HNM53EH4ULHK:00000001, PreviousRequestId: -
+DownstreamRouteFinderMiddleware setting pipeline errors because DownstreamRouteFinder returned the following ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+2026-06-08 10:36:03.199 +05:30 [WRN] RequestId: 0HNM53EH4ULHK:00000001, PreviousRequestId: -
+ResponderMiddleware found 1 error ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+Setting error response for request: GET /
+2026-06-08 10:36:03.234 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 null null 518.3107ms
+2026-06-08 10:37:20.585 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/register - application/json 111
+2026-06-08 10:37:20.653 +05:30 [INF] RequestId: 0HNM53EH4ULHL:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 10:37:20.661 +05:30 [INF] RequestId: 0HNM53EH4ULHL:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/register' in the route /owner/{everything}.
+2026-06-08 10:37:20.926 +05:30 [INF] RequestId: 0HNM53EH4ULHL:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/register
+2026-06-08 10:37:20.964 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/register - 200 null application/json; charset=utf-8 379.4169ms
+2026-06-08 10:37:20.983 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/register, Response status code: 200
+2026-06-08 10:43:22.763 +05:30 [INF] Now listening on: http://localhost:5000
+2026-06-08 10:43:23.205 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-08 10:43:23.209 +05:30 [INF] Hosting environment: Development
+2026-06-08 10:43:23.211 +05:30 [INF] Content root path: C:\Users\2492274\OneDrive - Cognizant\Desktop\Project\Gateway
+2026-06-08 10:43:25.639 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-06-08 10:43:26.739 +05:30 [WRN] RequestId: 0HNM53IKPQDC7:00000001, PreviousRequestId: -
+DownstreamRouteFinderMiddleware setting pipeline errors because DownstreamRouteFinder returned the following ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+2026-06-08 10:43:26.749 +05:30 [WRN] RequestId: 0HNM53IKPQDC7:00000001, PreviousRequestId: -
+ResponderMiddleware found 1 error ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+Setting error response for request: GET /
+2026-06-08 10:43:26.799 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 null null 1169.3733ms
+2026-06-08 10:43:32.565 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/register - application/json 111
+2026-06-08 10:43:32.610 +05:30 [INF] RequestId: 0HNM53IKPQDC8:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 10:43:32.616 +05:30 [INF] RequestId: 0HNM53IKPQDC8:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/register' in the route /owner/{everything}.
+2026-06-08 10:43:35.166 +05:30 [INF] RequestId: 0HNM53IKPQDC8:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/register
+2026-06-08 10:43:35.191 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/register - 200 null application/json; charset=utf-8 2626.8428ms
+2026-06-08 10:43:35.201 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/register, Response status code: 200
+2026-06-08 10:45:42.987 +05:30 [INF] Now listening on: http://localhost:5000
+2026-06-08 10:45:43.755 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-08 10:45:43.999 +05:30 [INF] Hosting environment: Development
+2026-06-08 10:45:44.157 +05:30 [INF] Content root path: C:\Users\2492274\OneDrive - Cognizant\Desktop\Project\Gateway
+2026-06-08 10:45:44.858 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-06-08 10:45:45.507 +05:30 [WRN] RequestId: 0HNM53JUM1AC6:00000001, PreviousRequestId: -
+DownstreamRouteFinderMiddleware setting pipeline errors because DownstreamRouteFinder returned the following ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+2026-06-08 10:45:45.513 +05:30 [WRN] RequestId: 0HNM53JUM1AC6:00000001, PreviousRequestId: -
+ResponderMiddleware found 1 error ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+Setting error response for request: GET /
+2026-06-08 10:45:45.608 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 null null 753.6121ms
+2026-06-08 10:46:05.356 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/register - application/json 111
+2026-06-08 10:46:05.408 +05:30 [INF] RequestId: 0HNM53JUM1AC7:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 10:46:05.414 +05:30 [INF] RequestId: 0HNM53JUM1AC7:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/register' in the route /owner/{everything}.
+2026-06-08 10:47:56.178 +05:30 [INF] Now listening on: http://localhost:5000
+2026-06-08 10:47:56.636 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/register - application/json 111
+2026-06-08 10:47:56.773 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-08 10:47:56.784 +05:30 [INF] Hosting environment: Development
+2026-06-08 10:47:56.786 +05:30 [INF] Content root path: C:\Users\2492274\OneDrive - Cognizant\Desktop\Project\Gateway
+2026-06-08 10:47:56.874 +05:30 [INF] RequestId: 0HNM53L6AIHJR:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 10:47:56.883 +05:30 [INF] RequestId: 0HNM53L6AIHJR:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/register' in the route /owner/{everything}.
+2026-06-08 10:47:58.480 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-06-08 10:47:58.758 +05:30 [WRN] RequestId: 0HNM53L6AIHJS:00000001, PreviousRequestId: -
+DownstreamRouteFinderMiddleware setting pipeline errors because DownstreamRouteFinder returned the following ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+2026-06-08 10:47:58.766 +05:30 [WRN] RequestId: 0HNM53L6AIHJS:00000001, PreviousRequestId: -
+ResponderMiddleware found 1 error ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+Setting error response for request: GET /
+2026-06-08 10:47:58.819 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 null null 340.4896ms
+2026-06-08 10:48:30.715 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/register - application/json 111
+2026-06-08 10:48:30.737 +05:30 [INF] RequestId: 0HNM53L6AIHJR:00000001, PreviousRequestId: -
+102 unknown status code of request URI: 
+2026-06-08 10:48:30.738 +05:30 [INF] RequestId: 0HNM53L6AIHJT:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 10:48:30.741 +05:30 [INF] RequestId: 0HNM53L6AIHJT:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/register' in the route /owner/{everything}.
+2026-06-08 10:48:31.562 +05:30 [WRN] RequestId: 0HNM53L6AIHJR:00000001, PreviousRequestId: -
+ResponderMiddleware found 1 error ->
+RequestCanceled: The operation was canceled.
+Setting error response for request: POST /owner/register
+2026-06-08 10:48:31.567 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/register - 499 null null 34935.5953ms
+2026-06-08 10:49:56.194 +05:30 [INF] Now listening on: http://localhost:5000
+2026-06-08 10:49:56.623 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-08 10:49:56.627 +05:30 [INF] Hosting environment: Development
+2026-06-08 10:49:56.629 +05:30 [INF] Content root path: C:\Users\2492274\OneDrive - Cognizant\Desktop\Project\Gateway
+2026-06-08 10:49:59.077 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-06-08 10:50:00.038 +05:30 [WRN] RequestId: 0HNM53MA12J5P:00000001, PreviousRequestId: -
+DownstreamRouteFinderMiddleware setting pipeline errors because DownstreamRouteFinder returned the following ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+2026-06-08 10:50:00.050 +05:30 [WRN] RequestId: 0HNM53MA12J5P:00000001, PreviousRequestId: -
+ResponderMiddleware found 1 error ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+Setting error response for request: GET /
+2026-06-08 10:50:00.141 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 null null 1066.7376ms
+2026-06-08 10:50:03.275 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/register - application/json 115
+2026-06-08 10:50:03.332 +05:30 [INF] RequestId: 0HNM53MA12J5Q:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 10:50:03.339 +05:30 [INF] RequestId: 0HNM53MA12J5Q:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/register' in the route /owner/{everything}.
+2026-06-08 10:50:30.194 +05:30 [INF] RequestId: 0HNM53MA12J5Q:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/register
+2026-06-08 10:50:30.221 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/register - 200 null application/json; charset=utf-8 26946.4979ms
+2026-06-08 10:50:30.233 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/register, Response status code: 200
+2026-06-08 10:52:01.634 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/register - application/json 116
+2026-06-08 10:52:01.654 +05:30 [INF] RequestId: 0HNM53MA12J5R:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 10:52:01.657 +05:30 [INF] RequestId: 0HNM53MA12J5R:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/register' in the route /owner/{everything}.
+2026-06-08 10:52:02.049 +05:30 [INF] RequestId: 0HNM53MA12J5R:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/register
+2026-06-08 10:52:02.060 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/register - 200 null application/json; charset=utf-8 425.3883ms
+2026-06-08 10:52:02.077 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/register, Response status code: 200
+2026-06-08 10:52:55.868 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/owner/login - application/json 64
+2026-06-08 10:52:55.878 +05:30 [INF] RequestId: 0HNM53MA12J5S:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 10:52:55.881 +05:30 [INF] RequestId: 0HNM53MA12J5S:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/login' in the route /owner/{everything}.
+2026-06-08 10:52:56.055 +05:30 [WRN] RequestId: 0HNM53MA12J5S:00000001, PreviousRequestId: -
+404 Not Found status code of request URI: http://localhost:5242/api/owner/login
+2026-06-08 10:52:56.065 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/owner/login - 404 null text/plain; charset=utf-8 196.9263ms
+2026-06-08 10:52:56.084 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/owner/login, Response status code: 404
+2026-06-08 10:53:32.630 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/owner/login - application/json 64
+2026-06-08 10:53:32.645 +05:30 [INF] RequestId: 0HNM53MA12J5T:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 10:53:32.647 +05:30 [INF] RequestId: 0HNM53MA12J5T:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/login' in the route /owner/{everything}.
+2026-06-08 10:53:32.703 +05:30 [WRN] RequestId: 0HNM53MA12J5T:00000001, PreviousRequestId: -
+404 Not Found status code of request URI: http://localhost:5242/api/owner/login
+2026-06-08 10:53:32.709 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/owner/login - 404 null text/plain; charset=utf-8 78.8377ms
+2026-06-08 10:53:32.736 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/owner/login, Response status code: 404
+2026-06-08 10:54:58.997 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/owner/login - application/json 63
+2026-06-08 10:54:59.013 +05:30 [INF] RequestId: 0HNM53MA12J5U:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 10:54:59.017 +05:30 [INF] RequestId: 0HNM53MA12J5U:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/login' in the route /owner/{everything}.
+2026-06-08 10:54:59.092 +05:30 [WRN] RequestId: 0HNM53MA12J5U:00000001, PreviousRequestId: -
+404 Not Found status code of request URI: http://localhost:5242/api/owner/login
+2026-06-08 10:54:59.100 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/owner/login - 404 null text/plain; charset=utf-8 103.6667ms
+2026-06-08 10:54:59.129 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/owner/login, Response status code: 404
+2026-06-08 10:57:26.191 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/owner/login - application/json 63
+2026-06-08 10:57:26.200 +05:30 [INF] RequestId: 0HNM53MA12J5V:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 10:57:26.201 +05:30 [INF] RequestId: 0HNM53MA12J5V:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/login' in the route /owner/{everything}.
+2026-06-08 10:57:26.274 +05:30 [WRN] RequestId: 0HNM53MA12J5V:00000001, PreviousRequestId: -
+404 Not Found status code of request URI: http://localhost:5242/api/owner/login
+2026-06-08 10:57:26.280 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/owner/login - 404 null text/plain; charset=utf-8 89.7598ms
+2026-06-08 10:57:26.284 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/owner/login, Response status code: 404
+2026-06-08 10:59:35.539 +05:30 [INF] Now listening on: http://localhost:5000
+2026-06-08 10:59:35.853 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-08 10:59:35.856 +05:30 [INF] Hosting environment: Development
+2026-06-08 10:59:35.857 +05:30 [INF] Content root path: C:\Users\2492274\OneDrive - Cognizant\Desktop\Project\Gateway
+2026-06-08 10:59:37.439 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-06-08 10:59:38.232 +05:30 [WRN] RequestId: 0HNM53RMP7HTT:00000001, PreviousRequestId: -
+DownstreamRouteFinderMiddleware setting pipeline errors because DownstreamRouteFinder returned the following ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+2026-06-08 10:59:38.247 +05:30 [WRN] RequestId: 0HNM53RMP7HTT:00000001, PreviousRequestId: -
+ResponderMiddleware found 1 error ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+Setting error response for request: GET /
+2026-06-08 10:59:38.349 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 null null 913.2078ms
+2026-06-08 10:59:42.609 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/owner/login - application/json 63
+2026-06-08 10:59:42.643 +05:30 [INF] RequestId: 0HNM53RMP7HTU:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 10:59:42.649 +05:30 [INF] RequestId: 0HNM53RMP7HTU:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/login' in the route /owner/{everything}.
+2026-06-08 10:59:45.313 +05:30 [WRN] RequestId: 0HNM53RMP7HTU:00000001, PreviousRequestId: -
+404 Not Found status code of request URI: http://localhost:5242/api/owner/login
+2026-06-08 10:59:45.326 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/owner/login - 404 null text/plain; charset=utf-8 2717.1947ms
+2026-06-08 10:59:45.332 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/owner/login, Response status code: 404
+2026-06-08 10:59:57.972 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/owner/login - application/json 63
+2026-06-08 10:59:57.978 +05:30 [INF] RequestId: 0HNM53RMP7HTV:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 10:59:57.979 +05:30 [INF] RequestId: 0HNM53RMP7HTV:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/login' in the route /owner/{everything}.
+2026-06-08 10:59:58.050 +05:30 [WRN] RequestId: 0HNM53RMP7HTV:00000001, PreviousRequestId: -
+404 Not Found status code of request URI: http://localhost:5242/api/owner/login
+2026-06-08 10:59:58.058 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/owner/login - 404 null text/plain; charset=utf-8 85.2539ms
+2026-06-08 10:59:58.062 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/owner/login, Response status code: 404
+2026-06-08 11:02:34.493 +05:30 [INF] Now listening on: http://localhost:5000
+2026-06-08 11:02:34.814 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-08 11:02:34.817 +05:30 [INF] Hosting environment: Development
+2026-06-08 11:02:34.819 +05:30 [INF] Content root path: C:\Users\2492274\OneDrive - Cognizant\Desktop\Project\Gateway
+2026-06-08 11:02:37.929 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-06-08 11:02:38.841 +05:30 [WRN] RequestId: 0HNM53TC1G7FF:00000001, PreviousRequestId: -
+DownstreamRouteFinderMiddleware setting pipeline errors because DownstreamRouteFinder returned the following ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+2026-06-08 11:02:38.855 +05:30 [WRN] RequestId: 0HNM53TC1G7FF:00000001, PreviousRequestId: -
+ResponderMiddleware found 1 error ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+Setting error response for request: GET /
+2026-06-08 11:02:38.966 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 null null 1039.453ms
+2026-06-08 11:02:40.716 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/owner/login - application/json 63
+2026-06-08 11:02:40.752 +05:30 [INF] RequestId: 0HNM53TC1G7FG:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 11:02:40.759 +05:30 [INF] RequestId: 0HNM53TC1G7FG:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/login' in the route /owner/{everything}.
+2026-06-08 11:02:43.322 +05:30 [WRN] RequestId: 0HNM53TC1G7FG:00000001, PreviousRequestId: -
+404 Not Found status code of request URI: http://localhost:5242/api/owner/login
+2026-06-08 11:02:43.338 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/owner/login - 404 null text/plain; charset=utf-8 2622.7758ms
+2026-06-08 11:02:43.346 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/owner/login, Response status code: 404
+2026-06-08 11:03:43.376 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/owner/login - application/json 63
+2026-06-08 11:03:43.392 +05:30 [INF] RequestId: 0HNM53TC1G7FH:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 11:03:43.396 +05:30 [INF] RequestId: 0HNM53TC1G7FH:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/login' in the route /owner/{everything}.
+2026-06-08 11:03:43.514 +05:30 [WRN] RequestId: 0HNM53TC1G7FH:00000001, PreviousRequestId: -
+404 Not Found status code of request URI: http://localhost:5242/api/owner/login
+2026-06-08 11:03:43.530 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/owner/login - 404 null text/plain; charset=utf-8 157.1968ms
+2026-06-08 11:03:43.537 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/owner/login, Response status code: 404
+2026-06-08 11:05:13.114 +05:30 [INF] Now listening on: http://localhost:5000
+2026-06-08 11:05:14.422 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-08 11:05:14.429 +05:30 [INF] Hosting environment: Development
+2026-06-08 11:05:14.434 +05:30 [INF] Content root path: C:\Users\2492274\OneDrive - Cognizant\Desktop\Project\Gateway
+2026-06-08 11:05:15.882 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-06-08 11:05:16.937 +05:30 [WRN] RequestId: 0HNM53URAOG1G:00000001, PreviousRequestId: -
+DownstreamRouteFinderMiddleware setting pipeline errors because DownstreamRouteFinder returned the following ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+2026-06-08 11:05:16.955 +05:30 [WRN] RequestId: 0HNM53URAOG1G:00000001, PreviousRequestId: -
+ResponderMiddleware found 1 error ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+Setting error response for request: GET /
+2026-06-08 11:05:17.006 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 null null 1133.337ms
+2026-06-08 11:05:36.449 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/login - application/json 63
+2026-06-08 11:05:36.508 +05:30 [INF] RequestId: 0HNM53URAOG1H:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 11:05:36.515 +05:30 [INF] RequestId: 0HNM53URAOG1H:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/login' in the route /owner/{everything}.
+2026-06-08 11:06:29.056 +05:30 [INF] RequestId: 0HNM53URAOG1H:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/login
+2026-06-08 11:06:29.097 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/login - 200 null application/json; charset=utf-8 52648.9051ms
+2026-06-08 11:06:29.132 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/login, Response status code: 200
+2026-06-08 12:24:26.789 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/register - application/json 118
+2026-06-08 12:24:26.805 +05:30 [INF] RequestId: 0HNM53URAOG1I:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 12:24:26.807 +05:30 [INF] RequestId: 0HNM53URAOG1I:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/register' in the route /owner/{everything}.
+2026-06-08 12:24:27.607 +05:30 [INF] RequestId: 0HNM53URAOG1I:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/register
+2026-06-08 12:24:27.624 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/register - 200 null application/json; charset=utf-8 835.7242ms
+2026-06-08 12:24:27.630 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/register, Response status code: 200
+2026-06-08 12:48:44.826 +05:30 [INF] Now listening on: http://localhost:5000
+2026-06-08 12:48:45.306 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-08 12:48:45.313 +05:30 [INF] Hosting environment: Development
+2026-06-08 12:48:45.315 +05:30 [INF] Content root path: C:\Users\2492274\OneDrive - Cognizant\Desktop\Project\Gateway
+2026-06-08 12:48:46.603 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-06-08 12:48:46.873 +05:30 [WRN] RequestId: 0HNM55OMLJCTE:00000001, PreviousRequestId: -
+DownstreamRouteFinderMiddleware setting pipeline errors because DownstreamRouteFinder returned the following ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+2026-06-08 12:48:46.876 +05:30 [WRN] RequestId: 0HNM55OMLJCTE:00000001, PreviousRequestId: -
+ResponderMiddleware found 1 error ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+Setting error response for request: GET /
+2026-06-08 12:48:46.897 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 null null 298.4217ms
+2026-06-08 12:49:07.832 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/servicecenter - application/json 137
+2026-06-08 12:49:07.862 +05:30 [INF] RequestId: 0HNM55OMLJCTF:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 12:49:07.865 +05:30 [INF] RequestId: 0HNM55OMLJCTF:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 12:49:09.861 +05:30 [WRN] RequestId: 0HNM55OMLJCTF:00000001, PreviousRequestId: -
+500 Internal Server Error status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 12:49:09.873 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/servicecenter - 500 null text/plain; charset=utf-8 2041.5114ms
+2026-06-08 12:49:09.878 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/servicecenter, Response status code: 500
+2026-06-08 12:50:26.763 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/register - application/json 118
+2026-06-08 12:50:26.770 +05:30 [INF] RequestId: 0HNM55OMLJCTG:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 12:50:26.772 +05:30 [INF] RequestId: 0HNM55OMLJCTG:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/register' in the route /owner/{everything}.
+2026-06-08 12:50:29.861 +05:30 [INF] RequestId: 0HNM55OMLJCTG:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/register
+2026-06-08 12:50:29.868 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/register - 200 null application/json; charset=utf-8 3108.0667ms
+2026-06-08 12:50:29.878 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/register, Response status code: 200
+2026-06-08 12:50:47.158 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/register - application/json 115
+2026-06-08 12:50:47.163 +05:30 [INF] RequestId: 0HNM55OMLJCTH:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 12:50:47.164 +05:30 [INF] RequestId: 0HNM55OMLJCTH:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/register' in the route /owner/{everything}.
+2026-06-08 12:50:47.467 +05:30 [INF] RequestId: 0HNM55OMLJCTH:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/register
+2026-06-08 12:50:47.471 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/register - 200 null application/json; charset=utf-8 312.7889ms
+2026-06-08 12:50:47.475 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/register, Response status code: 200
+2026-06-08 12:51:09.393 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/register - application/json 118
+2026-06-08 12:51:09.398 +05:30 [INF] RequestId: 0HNM55OMLJCTI:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 12:51:09.399 +05:30 [INF] RequestId: 0HNM55OMLJCTI:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/register' in the route /owner/{everything}.
+2026-06-08 12:51:09.763 +05:30 [INF] RequestId: 0HNM55OMLJCTI:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/register
+2026-06-08 12:51:09.768 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/register - 200 null application/json; charset=utf-8 376.7549ms
+2026-06-08 12:51:09.781 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/register, Response status code: 200
+2026-06-08 12:51:44.065 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/login - application/json 67
+2026-06-08 12:51:44.069 +05:30 [INF] RequestId: 0HNM55OMLJCTJ:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 12:51:44.071 +05:30 [INF] RequestId: 0HNM55OMLJCTJ:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/login' in the route /owner/{everything}.
+2026-06-08 12:51:44.160 +05:30 [WRN] RequestId: 0HNM55OMLJCTJ:00000001, PreviousRequestId: -
+400 Bad Request status code of request URI: http://localhost:5242/api/owner/login
+2026-06-08 12:51:44.164 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/login - 400 null application/problem+json; charset=utf-8 99.4924ms
+2026-06-08 12:51:44.176 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/login, Response status code: 400
+2026-06-08 12:51:49.807 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/login - application/json 63
+2026-06-08 12:51:49.811 +05:30 [INF] RequestId: 0HNM55OMLJCTK:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 12:51:49.812 +05:30 [INF] RequestId: 0HNM55OMLJCTK:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/login' in the route /owner/{everything}.
+2026-06-08 12:51:50.348 +05:30 [INF] RequestId: 0HNM55OMLJCTK:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/login
+2026-06-08 12:51:50.355 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/login - 200 null application/json; charset=utf-8 547.8711ms
+2026-06-08 12:51:50.360 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/login, Response status code: 200
+2026-06-08 12:52:05.380 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/servicecenter - application/json 137
+2026-06-08 12:52:05.383 +05:30 [INF] RequestId: 0HNM55OMLJCTL:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 12:52:05.385 +05:30 [INF] RequestId: 0HNM55OMLJCTL:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 12:52:05.505 +05:30 [WRN] RequestId: 0HNM55OMLJCTL:00000001, PreviousRequestId: -
+500 Internal Server Error status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 12:52:05.509 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/servicecenter - 500 null text/plain; charset=utf-8 129.2594ms
+2026-06-08 12:52:05.513 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/servicecenter, Response status code: 500
+2026-06-08 12:54:58.746 +05:30 [INF] Now listening on: http://localhost:5000
+2026-06-08 12:54:58.991 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-08 12:54:58.993 +05:30 [INF] Hosting environment: Development
+2026-06-08 12:54:58.995 +05:30 [INF] Content root path: C:\Users\2492274\OneDrive - Cognizant\Desktop\Project\Gateway
+2026-06-08 12:55:00.889 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-06-08 12:55:01.183 +05:30 [WRN] RequestId: 0HNM55S5UTKDA:00000001, PreviousRequestId: -
+DownstreamRouteFinderMiddleware setting pipeline errors because DownstreamRouteFinder returned the following ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+2026-06-08 12:55:01.186 +05:30 [WRN] RequestId: 0HNM55S5UTKDA:00000001, PreviousRequestId: -
+ResponderMiddleware found 1 error ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+Setting error response for request: GET /
+2026-06-08 12:55:01.218 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 null null 350.9634ms
+2026-06-08 12:55:05.809 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/servicecenter - application/json 139
+2026-06-08 12:55:05.833 +05:30 [INF] RequestId: 0HNM55S5UTKDB:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 12:55:05.837 +05:30 [INF] RequestId: 0HNM55S5UTKDB:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 12:55:10.194 +05:30 [INF] RequestId: 0HNM55S5UTKDB:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 12:55:10.212 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/servicecenter - 200 null application/json; charset=utf-8 4403.8619ms
+2026-06-08 12:55:10.218 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/servicecenter, Response status code: 200
+2026-06-08 12:57:05.432 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/login - application/json 118
+2026-06-08 12:57:05.441 +05:30 [INF] RequestId: 0HNM55S5UTKDC:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 12:57:05.442 +05:30 [INF] RequestId: 0HNM55S5UTKDC:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/login' in the route /owner/{everything}.
+2026-06-08 12:57:05.547 +05:30 [WRN] RequestId: 0HNM55S5UTKDC:00000001, PreviousRequestId: -
+400 Bad Request status code of request URI: http://localhost:5242/api/owner/login
+2026-06-08 12:57:05.561 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/login - 400 null application/problem+json; charset=utf-8 131.1196ms
+2026-06-08 12:57:05.567 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/login, Response status code: 400
+2026-06-08 12:57:14.102 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/register - application/json 118
+2026-06-08 12:57:14.108 +05:30 [INF] RequestId: 0HNM55S5UTKDD:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 12:57:14.110 +05:30 [INF] RequestId: 0HNM55S5UTKDD:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/register' in the route /owner/{everything}.
+2026-06-08 12:57:14.995 +05:30 [INF] RequestId: 0HNM55S5UTKDD:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/register
+2026-06-08 12:57:15.001 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/register - 200 null application/json; charset=utf-8 899.0004ms
+2026-06-08 12:57:15.006 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/register, Response status code: 200
+2026-06-08 12:57:33.943 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/login - application/json 63
+2026-06-08 12:57:33.948 +05:30 [INF] RequestId: 0HNM55S5UTKDE:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 12:57:33.949 +05:30 [INF] RequestId: 0HNM55S5UTKDE:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/login' in the route /owner/{everything}.
+2026-06-08 12:57:34.508 +05:30 [INF] RequestId: 0HNM55S5UTKDE:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/login
+2026-06-08 12:57:34.512 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/login - 200 null application/json; charset=utf-8 569.3583ms
+2026-06-08 12:57:34.516 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/login, Response status code: 200
+2026-06-08 12:58:35.264 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/servicecenter - application/json 139
+2026-06-08 12:58:35.273 +05:30 [INF] RequestId: 0HNM55S5UTKDF:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 12:58:35.274 +05:30 [INF] RequestId: 0HNM55S5UTKDF:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 12:58:35.412 +05:30 [INF] RequestId: 0HNM55S5UTKDF:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 12:58:35.418 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/servicecenter - 200 null application/json; charset=utf-8 153.5402ms
+2026-06-08 12:58:35.423 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/servicecenter, Response status code: 200
+2026-06-08 17:52:30.322 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/servicecenter - application/json 139
+2026-06-08 17:52:30.333 +05:30 [INF] RequestId: 0HNM55S5UTKDG:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 17:52:30.336 +05:30 [INF] RequestId: 0HNM55S5UTKDG:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 17:52:30.690 +05:30 [WRN] RequestId: 0HNM55S5UTKDG:00000001, PreviousRequestId: -
+401 Unauthorized status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 17:52:30.695 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/servicecenter - 401 0 null 373.0354ms
+2026-06-08 17:52:30.704 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/servicecenter, Response status code: 401
+2026-06-08 17:53:21.964 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/login - application/json 63
+2026-06-08 17:53:21.972 +05:30 [INF] RequestId: 0HNM55S5UTKDH:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 17:53:21.973 +05:30 [INF] RequestId: 0HNM55S5UTKDH:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/login' in the route /owner/{everything}.
+2026-06-08 17:53:22.327 +05:30 [INF] RequestId: 0HNM55S5UTKDH:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/login
+2026-06-08 17:53:22.333 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/login - 200 null application/json; charset=utf-8 371.2469ms
+2026-06-08 17:53:22.339 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/login, Response status code: 200
+2026-06-08 17:53:26.931 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/servicecenter - application/json 139
+2026-06-08 17:53:26.937 +05:30 [INF] RequestId: 0HNM55S5UTKDI:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 17:53:26.939 +05:30 [INF] RequestId: 0HNM55S5UTKDI:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 17:53:26.998 +05:30 [WRN] RequestId: 0HNM55S5UTKDI:00000001, PreviousRequestId: -
+401 Unauthorized status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 17:53:27.001 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/servicecenter - 401 0 null 69.9244ms
+2026-06-08 17:53:27.022 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/servicecenter, Response status code: 401
+2026-06-08 17:54:01.884 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/servicecenter - application/json 139
+2026-06-08 17:54:01.893 +05:30 [INF] RequestId: 0HNM55S5UTKDJ:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 17:54:01.895 +05:30 [INF] RequestId: 0HNM55S5UTKDJ:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 17:54:02.269 +05:30 [INF] RequestId: 0HNM55S5UTKDJ:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 17:54:02.278 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/servicecenter - 200 null application/json; charset=utf-8 394.6945ms
+2026-06-08 17:54:02.285 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/servicecenter, Response status code: 200
+2026-06-08 17:54:27.535 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/servicecenter - application/json 170
+2026-06-08 17:54:27.544 +05:30 [INF] RequestId: 0HNM55S5UTKDK:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 17:54:27.551 +05:30 [INF] RequestId: 0HNM55S5UTKDK:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 17:54:27.639 +05:30 [INF] RequestId: 0HNM55S5UTKDK:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 17:54:27.647 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/servicecenter - 200 null application/json; charset=utf-8 111.9617ms
+2026-06-08 17:54:27.674 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/servicecenter, Response status code: 200
+2026-06-08 17:54:32.550 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/servicecenter - application/json 170
+2026-06-08 17:54:32.561 +05:30 [INF] RequestId: 0HNM55S5UTKDL:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 17:54:32.562 +05:30 [INF] RequestId: 0HNM55S5UTKDL:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 17:54:32.741 +05:30 [INF] RequestId: 0HNM55S5UTKDL:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 17:54:32.748 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/servicecenter - 200 null application/json; charset=utf-8 198.2703ms
+2026-06-08 17:54:32.757 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/servicecenter, Response status code: 200
+2026-06-08 17:54:54.033 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/login - application/json 63
+2026-06-08 17:54:54.049 +05:30 [INF] RequestId: 0HNM55S5UTKDM:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 17:54:54.050 +05:30 [INF] RequestId: 0HNM55S5UTKDM:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/login' in the route /owner/{everything}.
+2026-06-08 17:54:54.143 +05:30 [WRN] RequestId: 0HNM55S5UTKDM:00000001, PreviousRequestId: -
+401 Unauthorized status code of request URI: http://localhost:5242/api/owner/login
+2026-06-08 17:54:54.151 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/login - 401 null application/json; charset=utf-8 117.6407ms
+2026-06-08 17:54:54.172 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/login, Response status code: 401
+2026-06-08 17:56:11.162 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/register - application/json 115
+2026-06-08 17:56:11.177 +05:30 [INF] RequestId: 0HNM55S5UTKDN:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 17:56:11.179 +05:30 [INF] RequestId: 0HNM55S5UTKDN:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/register' in the route /owner/{everything}.
+2026-06-08 17:56:11.521 +05:30 [INF] RequestId: 0HNM55S5UTKDN:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/register
+2026-06-08 17:56:11.530 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/register - 200 null application/json; charset=utf-8 367.7381ms
+2026-06-08 17:56:11.557 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/register, Response status code: 200
+2026-06-08 17:56:37.277 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/login - application/json 63
+2026-06-08 17:56:37.293 +05:30 [INF] RequestId: 0HNM55S5UTKDO:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 17:56:37.300 +05:30 [INF] RequestId: 0HNM55S5UTKDO:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/login' in the route /owner/{everything}.
+2026-06-08 17:56:37.769 +05:30 [INF] RequestId: 0HNM55S5UTKDO:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/login
+2026-06-08 17:56:37.777 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/login - 200 null application/json; charset=utf-8 499.5637ms
+2026-06-08 17:56:37.795 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/login, Response status code: 200
+2026-06-08 17:56:55.672 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/servicecenter - application/json 168
+2026-06-08 17:56:55.678 +05:30 [INF] RequestId: 0HNM55S5UTKDP:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 17:56:55.679 +05:30 [INF] RequestId: 0HNM55S5UTKDP:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 17:56:55.823 +05:30 [INF] RequestId: 0HNM55S5UTKDP:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 17:56:55.832 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/servicecenter - 200 null application/json; charset=utf-8 159.7459ms
+2026-06-08 17:56:55.842 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/servicecenter, Response status code: 200
+2026-06-08 17:57:12.217 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/servicecenter - application/json 168
+2026-06-08 17:57:12.222 +05:30 [INF] RequestId: 0HNM55S5UTKDQ:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 17:57:12.224 +05:30 [INF] RequestId: 0HNM55S5UTKDQ:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 17:57:12.324 +05:30 [INF] RequestId: 0HNM55S5UTKDQ:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 17:57:12.330 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/servicecenter - 200 null application/json; charset=utf-8 112.413ms
+2026-06-08 17:57:12.335 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/servicecenter, Response status code: 200
+2026-06-08 17:57:29.827 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/servicecenter - application/json 168
+2026-06-08 17:57:29.831 +05:30 [INF] RequestId: 0HNM55S5UTKDR:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 17:57:29.833 +05:30 [INF] RequestId: 0HNM55S5UTKDR:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 17:57:29.947 +05:30 [INF] RequestId: 0HNM55S5UTKDR:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 17:57:29.955 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/servicecenter - 200 null application/json; charset=utf-8 127.7428ms
+2026-06-08 17:57:29.967 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/servicecenter, Response status code: 200
+2026-06-08 17:58:15.299 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/login - application/json 63
+2026-06-08 17:58:15.315 +05:30 [INF] RequestId: 0HNM55S5UTKDS:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 17:58:15.316 +05:30 [INF] RequestId: 0HNM55S5UTKDS:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/login' in the route /owner/{everything}.
+2026-06-08 17:58:15.601 +05:30 [INF] RequestId: 0HNM55S5UTKDS:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/login
+2026-06-08 17:58:15.608 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/login - 200 null application/json; charset=utf-8 308.5903ms
+2026-06-08 17:58:15.619 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/login, Response status code: 200
+2026-06-08 17:58:24.660 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/servicecenter - application/json 173
+2026-06-08 17:58:24.664 +05:30 [INF] RequestId: 0HNM55S5UTKDT:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 17:58:24.665 +05:30 [INF] RequestId: 0HNM55S5UTKDT:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 17:58:24.796 +05:30 [INF] RequestId: 0HNM55S5UTKDT:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 17:58:24.802 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/servicecenter - 200 null application/json; charset=utf-8 141.8049ms
+2026-06-08 17:58:24.816 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/servicecenter, Response status code: 200
+2026-06-08 17:58:31.445 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/servicecenter - application/json 171
+2026-06-08 17:58:31.457 +05:30 [INF] RequestId: 0HNM55S5UTKDU:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 17:58:31.458 +05:30 [INF] RequestId: 0HNM55S5UTKDU:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 17:58:31.567 +05:30 [INF] RequestId: 0HNM55S5UTKDU:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 17:58:31.572 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/servicecenter - 200 null application/json; charset=utf-8 127.1942ms
+2026-06-08 17:58:31.577 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/servicecenter, Response status code: 200
+2026-06-08 18:00:26.430 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5000/owner/login/Nan_001 - application/json 63
+2026-06-08 18:00:26.445 +05:30 [INF] RequestId: 0HNM55S5UTKDV:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:00:26.446 +05:30 [INF] RequestId: 0HNM55S5UTKDV:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/login/Nan_001' in the route /owner/{everything}.
+2026-06-08 18:00:26.505 +05:30 [WRN] RequestId: 0HNM55S5UTKDV:00000001, PreviousRequestId: -
+404 Not Found status code of request URI: http://localhost:5242/api/owner/login/Nan_001
+2026-06-08 18:00:26.509 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5000/owner/login/Nan_001 - 404 0 null 79.1369ms
+2026-06-08 18:00:26.533 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE http://localhost:5000/owner/login/Nan_001, Response status code: 404
+2026-06-08 18:00:33.848 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5000/owner/Nan_001 - application/json 63
+2026-06-08 18:00:33.857 +05:30 [INF] RequestId: 0HNM55S5UTKE0:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:00:33.860 +05:30 [INF] RequestId: 0HNM55S5UTKE0:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/Nan_001' in the route /owner/{everything}.
+2026-06-08 18:00:34.098 +05:30 [INF] RequestId: 0HNM55S5UTKE0:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/Nan_001
+2026-06-08 18:00:34.110 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5000/owner/Nan_001 - 200 null application/json; charset=utf-8 261.0036ms
+2026-06-08 18:00:34.118 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE http://localhost:5000/owner/Nan_001, Response status code: 200
+2026-06-08 18:01:31.397 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/register - application/json 115
+2026-06-08 18:01:31.412 +05:30 [INF] RequestId: 0HNM55S5UTKE1:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:01:31.423 +05:30 [INF] RequestId: 0HNM55S5UTKE1:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/register' in the route /owner/{everything}.
+2026-06-08 18:01:31.749 +05:30 [INF] RequestId: 0HNM55S5UTKE1:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/register
+2026-06-08 18:01:31.758 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/register - 200 null application/json; charset=utf-8 360.7058ms
+2026-06-08 18:01:31.786 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/register, Response status code: 200
+2026-06-08 18:01:44.971 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/register - application/json 118
+2026-06-08 18:01:44.975 +05:30 [INF] RequestId: 0HNM55S5UTKE2:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:01:44.978 +05:30 [INF] RequestId: 0HNM55S5UTKE2:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/register' in the route /owner/{everything}.
+2026-06-08 18:01:45.254 +05:30 [INF] RequestId: 0HNM55S5UTKE2:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/register
+2026-06-08 18:01:45.261 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/register - 200 null application/json; charset=utf-8 290.0814ms
+2026-06-08 18:01:45.268 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/register, Response status code: 200
+2026-06-08 18:01:57.076 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/register - application/json 118
+2026-06-08 18:01:57.084 +05:30 [INF] RequestId: 0HNM55S5UTKE3:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:01:57.086 +05:30 [INF] RequestId: 0HNM55S5UTKE3:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/register' in the route /owner/{everything}.
+2026-06-08 18:01:57.368 +05:30 [INF] RequestId: 0HNM55S5UTKE3:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/register
+2026-06-08 18:01:57.374 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/register - 200 null application/json; charset=utf-8 298.185ms
+2026-06-08 18:01:57.382 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/register, Response status code: 200
+2026-06-08 18:02:13.769 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/login - application/json 63
+2026-06-08 18:02:13.774 +05:30 [INF] RequestId: 0HNM55S5UTKE4:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:02:13.776 +05:30 [INF] RequestId: 0HNM55S5UTKE4:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/login' in the route /owner/{everything}.
+2026-06-08 18:02:14.053 +05:30 [INF] RequestId: 0HNM55S5UTKE4:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/login
+2026-06-08 18:02:14.060 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/login - 200 null application/json; charset=utf-8 291.4853ms
+2026-06-08 18:02:14.071 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/login, Response status code: 200
+2026-06-08 18:02:30.749 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/servicecenter - application/json 171
+2026-06-08 18:02:30.753 +05:30 [INF] RequestId: 0HNM55S5UTKE5:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:02:30.755 +05:30 [INF] RequestId: 0HNM55S5UTKE5:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 18:02:30.905 +05:30 [INF] RequestId: 0HNM55S5UTKE5:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 18:02:30.910 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/servicecenter - 200 null application/json; charset=utf-8 160.9753ms
+2026-06-08 18:02:30.922 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/servicecenter, Response status code: 200
+2026-06-08 18:02:40.415 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/servicecenter - application/json 160
+2026-06-08 18:02:40.421 +05:30 [INF] RequestId: 0HNM55S5UTKE6:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:02:40.422 +05:30 [INF] RequestId: 0HNM55S5UTKE6:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 18:02:40.520 +05:30 [INF] RequestId: 0HNM55S5UTKE6:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 18:02:40.530 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/servicecenter - 200 null application/json; charset=utf-8 114.4457ms
+2026-06-08 18:02:40.538 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/servicecenter, Response status code: 200
+2026-06-08 18:02:52.708 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/servicecenter - application/json 160
+2026-06-08 18:02:52.714 +05:30 [INF] RequestId: 0HNM55S5UTKE7:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:02:52.717 +05:30 [INF] RequestId: 0HNM55S5UTKE7:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 18:02:52.761 +05:30 [INF] RequestId: 0HNM55S5UTKE7:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 18:02:52.767 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/servicecenter - 200 null application/json; charset=utf-8 58.7737ms
+2026-06-08 18:02:52.775 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/servicecenter, Response status code: 200
+2026-06-08 18:03:02.889 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/login - application/json 63
+2026-06-08 18:03:02.893 +05:30 [INF] RequestId: 0HNM55S5UTKE8:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:03:02.898 +05:30 [INF] RequestId: 0HNM55S5UTKE8:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/login' in the route /owner/{everything}.
+2026-06-08 18:03:03.171 +05:30 [INF] RequestId: 0HNM55S5UTKE8:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/login
+2026-06-08 18:03:03.177 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/login - 200 null application/json; charset=utf-8 287.7928ms
+2026-06-08 18:03:03.188 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/login, Response status code: 200
+2026-06-08 18:03:16.824 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/servicecenter - application/json 160
+2026-06-08 18:03:16.827 +05:30 [INF] RequestId: 0HNM55S5UTKE9:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:03:16.828 +05:30 [INF] RequestId: 0HNM55S5UTKE9:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 18:03:16.854 +05:30 [WRN] RequestId: 0HNM55S5UTKE9:00000001, PreviousRequestId: -
+401 Unauthorized status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 18:03:16.856 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/servicecenter - 401 0 null 31.8611ms
+2026-06-08 18:03:16.859 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/servicecenter, Response status code: 401
+2026-06-08 18:03:37.463 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/login - application/json 63
+2026-06-08 18:03:37.471 +05:30 [INF] RequestId: 0HNM55S5UTKEA:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:03:37.471 +05:30 [INF] RequestId: 0HNM55S5UTKEA:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/login' in the route /owner/{everything}.
+2026-06-08 18:03:37.719 +05:30 [INF] RequestId: 0HNM55S5UTKEA:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/login
+2026-06-08 18:03:37.722 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/login - 200 null application/json; charset=utf-8 258.938ms
+2026-06-08 18:03:37.726 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/login, Response status code: 200
+2026-06-08 18:03:53.755 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/servicecenter - application/json 160
+2026-06-08 18:03:53.761 +05:30 [INF] RequestId: 0HNM55S5UTKEB:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:03:53.763 +05:30 [INF] RequestId: 0HNM55S5UTKEB:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 18:03:53.796 +05:30 [WRN] RequestId: 0HNM55S5UTKEB:00000001, PreviousRequestId: -
+404 Not Found status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 18:03:53.800 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/servicecenter - 404 null text/plain; charset=utf-8 45.3979ms
+2026-06-08 18:03:53.812 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/servicecenter, Response status code: 404
+2026-06-08 18:04:06.864 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/servicecenter - application/json 160
+2026-06-08 18:04:06.868 +05:30 [INF] RequestId: 0HNM55S5UTKEC:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:04:06.869 +05:30 [INF] RequestId: 0HNM55S5UTKEC:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 18:04:06.966 +05:30 [INF] RequestId: 0HNM55S5UTKEC:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 18:04:06.970 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/servicecenter - 200 null application/json; charset=utf-8 105.709ms
+2026-06-08 18:04:06.975 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/servicecenter, Response status code: 200
+2026-06-08 18:04:15.467 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/servicecenter - application/json 164
+2026-06-08 18:04:15.470 +05:30 [INF] RequestId: 0HNM55S5UTKED:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:04:15.471 +05:30 [INF] RequestId: 0HNM55S5UTKED:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 18:04:15.566 +05:30 [INF] RequestId: 0HNM55S5UTKED:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 18:04:15.572 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/servicecenter - 200 null application/json; charset=utf-8 104.9385ms
+2026-06-08 18:04:15.577 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/servicecenter, Response status code: 200
+2026-06-08 18:04:35.164 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/owner/login - application/json 63
+2026-06-08 18:04:35.167 +05:30 [INF] RequestId: 0HNM55S5UTKEE:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:04:35.171 +05:30 [INF] RequestId: 0HNM55S5UTKEE:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/login' in the route /owner/{everything}.
+2026-06-08 18:04:35.428 +05:30 [INF] RequestId: 0HNM55S5UTKEE:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/login
+2026-06-08 18:04:35.433 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/owner/login - 200 null application/json; charset=utf-8 269.0229ms
+2026-06-08 18:04:35.438 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/owner/login, Response status code: 200
+2026-06-08 18:04:50.436 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/servicecenter - application/json 167
+2026-06-08 18:04:50.440 +05:30 [INF] RequestId: 0HNM55S5UTKEF:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:04:50.441 +05:30 [INF] RequestId: 0HNM55S5UTKEF:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 18:04:50.570 +05:30 [INF] RequestId: 0HNM55S5UTKEF:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 18:04:50.575 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/servicecenter - 200 null application/json; charset=utf-8 138.9637ms
+2026-06-08 18:04:50.580 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/servicecenter, Response status code: 200
+2026-06-08 18:05:07.366 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/servicecenter - application/json 170
+2026-06-08 18:05:07.372 +05:30 [INF] RequestId: 0HNM55S5UTKEG:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:05:07.374 +05:30 [INF] RequestId: 0HNM55S5UTKEG:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter' in the route /servicecenter/{everything}.
+2026-06-08 18:05:07.449 +05:30 [INF] RequestId: 0HNM55S5UTKEG:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5268/api/servicecenter
+2026-06-08 18:05:07.455 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/servicecenter - 200 null application/json; charset=utf-8 89.4717ms
+2026-06-08 18:05:07.459 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/servicecenter, Response status code: 200
+2026-06-08 18:05:56.449 +05:30 [INF] Request starting HTTP/1.1 PATCH http://localhost:5000/servicecenter/Sir_001 - application/json 170
+2026-06-08 18:05:56.463 +05:30 [INF] RequestId: 0HNM55S5UTKEH:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:05:56.464 +05:30 [INF] RequestId: 0HNM55S5UTKEH:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter/Sir_001' in the route /servicecenter/{everything}.
+2026-06-08 18:05:56.748 +05:30 [WRN] RequestId: 0HNM55S5UTKEH:00000001, PreviousRequestId: -
+404 Not Found status code of request URI: http://localhost:5268/api/servicecenter/Sir_001
+2026-06-08 18:05:56.789 +05:30 [INF] Request finished HTTP/1.1 PATCH http://localhost:5000/servicecenter/Sir_001 - 404 null text/plain; charset=utf-8 340.0666ms
+2026-06-08 18:05:56.814 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: PATCH http://localhost:5000/servicecenter/Sir_001, Response status code: 404
+2026-06-08 18:06:45.016 +05:30 [INF] Request starting HTTP/1.1 PATCH http://localhost:5000/servicecenter/Pon_005 - application/json 67
+2026-06-08 18:06:45.030 +05:30 [INF] RequestId: 0HNM55S5UTKEI:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:06:45.031 +05:30 [INF] RequestId: 0HNM55S5UTKEI:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter/Pon_005' in the route /servicecenter/{everything}.
+2026-06-08 18:06:45.109 +05:30 [INF] RequestId: 0HNM55S5UTKEI:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5268/api/servicecenter/Pon_005
+2026-06-08 18:06:45.115 +05:30 [INF] Request finished HTTP/1.1 PATCH http://localhost:5000/servicecenter/Pon_005 - 200 null application/json; charset=utf-8 98.7827ms
+2026-06-08 18:06:45.132 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: PATCH http://localhost:5000/servicecenter/Pon_005, Response status code: 200
+2026-06-08 18:07:12.782 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5000/servicecenter/Sir_001 - application/json 67
+2026-06-08 18:07:12.798 +05:30 [INF] RequestId: 0HNM55S5UTKEJ:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:07:12.799 +05:30 [INF] RequestId: 0HNM55S5UTKEJ:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter/Sir_001' in the route /servicecenter/{everything}.
+2026-06-08 18:07:12.871 +05:30 [WRN] RequestId: 0HNM55S5UTKEJ:00000001, PreviousRequestId: -
+404 Not Found status code of request URI: http://localhost:5268/api/servicecenter/Sir_001
+2026-06-08 18:07:12.877 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5000/servicecenter/Sir_001 - 404 null text/plain; charset=utf-8 95.3988ms
+2026-06-08 18:07:12.900 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE http://localhost:5000/servicecenter/Sir_001, Response status code: 404
+2026-06-08 18:07:32.664 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5000/servicecenter/Pon_005 - application/json 67
+2026-06-08 18:07:32.669 +05:30 [INF] RequestId: 0HNM55S5UTKEK:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/servicecenter/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:07:32.670 +05:30 [INF] RequestId: 0HNM55S5UTKEK:00000001, PreviousRequestId: -
+No authentication is required for the path '/servicecenter/Pon_005' in the route /servicecenter/{everything}.
+2026-06-08 18:07:32.859 +05:30 [INF] RequestId: 0HNM55S5UTKEK:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5268/api/servicecenter/Pon_005
+2026-06-08 18:07:32.865 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5000/servicecenter/Pon_005 - 200 null application/json; charset=utf-8 200.7669ms
+2026-06-08 18:07:32.874 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE http://localhost:5000/servicecenter/Pon_005, Response status code: 200
+2026-06-08 18:08:04.782 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5000/owner/Nan_003 - application/json 63
+2026-06-08 18:08:04.799 +05:30 [INF] RequestId: 0HNM55S5UTKEL:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:08:04.801 +05:30 [INF] RequestId: 0HNM55S5UTKEL:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/Nan_003' in the route /owner/{everything}.
+2026-06-08 18:08:04.926 +05:30 [INF] RequestId: 0HNM55S5UTKEL:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/Nan_003
+2026-06-08 18:08:04.931 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5000/owner/Nan_003 - 200 null application/json; charset=utf-8 148.2476ms
+2026-06-08 18:08:04.958 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE http://localhost:5000/owner/Nan_003, Response status code: 200
+2026-06-08 18:13:14.270 +05:30 [INF] Now listening on: http://localhost:5000
+2026-06-08 18:13:14.814 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-08 18:13:14.818 +05:30 [INF] Hosting environment: Development
+2026-06-08 18:13:14.820 +05:30 [INF] Content root path: C:\Users\2492274\OneDrive - Cognizant\Desktop\Project\Gateway
+2026-06-08 18:13:15.472 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-06-08 18:13:15.992 +05:30 [WRN] RequestId: 0HNM5BE0S29O0:00000001, PreviousRequestId: -
+DownstreamRouteFinderMiddleware setting pipeline errors because DownstreamRouteFinder returned the following ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+2026-06-08 18:13:16.016 +05:30 [WRN] RequestId: 0HNM5BE0S29O0:00000001, PreviousRequestId: -
+ResponderMiddleware found 1 error ->
+UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /
+Setting error response for request: GET /
+2026-06-08 18:13:16.159 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 null null 689.1339ms
+2026-06-08 18:13:19.656 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5000/owner/Nan_003 - application/json 63
+2026-06-08 18:13:19.704 +05:30 [INF] RequestId: 0HNM5BE0S29O1:00000001, PreviousRequestId: -
+Rate limiting is disabled for route '/owner/{everything}' via the EnableRateLimiting option.
+2026-06-08 18:13:19.711 +05:30 [INF] RequestId: 0HNM5BE0S29O1:00000001, PreviousRequestId: -
+No authentication is required for the path '/owner/Nan_003' in the route /owner/{everything}.
+2026-06-08 18:13:25.793 +05:30 [INF] RequestId: 0HNM5BE0S29O1:00000001, PreviousRequestId: -
+200 OK status code of request URI: http://localhost:5242/api/owner/Nan_003
+2026-06-08 18:13:25.819 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5000/owner/Nan_003 - 200 null application/json; charset=utf-8 6164.2115ms
+2026-06-08 18:13:25.830 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE http://localhost:5000/owner/Nan_003, Response status code: 200

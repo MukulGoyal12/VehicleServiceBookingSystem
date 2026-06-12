@@ -1,0 +1,97 @@
+[
+  {
+    "ContainingType": "ServiceCenterService.Controllers.ServiceCenterController",
+    "Method": "Get",
+    "RelativePath": "api/ServiceCenter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceCenterService.Controllers.ServiceCenterController",
+    "Method": "Post",
+    "RelativePath": "api/ServiceCenter",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ServiceCenterService.DTO.ServiceCenterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceCenterService.Controllers.ServiceCenterController",
+    "Method": "Get",
+    "RelativePath": "api/ServiceCenter/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceCenterService.Controllers.ServiceCenterController",
+    "Method": "Patch",
+    "RelativePath": "api/ServiceCenter/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "ServiceCenterService.DTO.ServiceCenterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceCenterService.Controllers.ServiceCenterController",
+    "Method": "Delete",
+    "RelativePath": "api/ServiceCenter/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceCenterService.Controllers.ServiceCenterController",
+    "Method": "DeleteByOwner",
+    "RelativePath": "api/ServiceCenter/deleteByOwner/{ownerId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ownerId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

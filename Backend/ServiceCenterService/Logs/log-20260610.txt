@@ -1,0 +1,43 @@
+2026-06-10 11:33:08.548 +05:30 [INF] User profile is available. Using 'C:\Users\2492274\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-10 11:33:09.759 +05:30 [INF] Now listening on: http://localhost:5268
+2026-06-10 11:33:12.699 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5268/weatherforecast - null null
+2026-06-10 11:33:14.695 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5268/weatherforecast - 404 null null 2006.0344ms
+2026-06-10 11:33:14.784 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5268/weatherforecast, Response status code: 404
+2026-06-10 11:36:27.002 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5268/api/servicecenter - null null
+2026-06-10 11:36:27.231 +05:30 [INF] Executing endpoint 'ServiceCenterService.Controllers.ServiceCenterController.Get (ServiceCenterService)'
+2026-06-10 11:36:27.318 +05:30 [INF] Route matched with {action = "Get", controller = "ServiceCenter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller ServiceCenterService.Controllers.ServiceCenterController (ServiceCenterService).
+2026-06-10 11:36:29.743 +05:30 [INF] Executed DbCommand (125ms) [Parameters=[@__ownerId_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[ServiceCenterID], [s].[Contact], [s].[Location], [s].[Name], [s].[OwnerId], [s].[ServiceDescription]
+FROM [ServiceCenters] AS [s]
+WHERE [s].[OwnerId] = @__ownerId_0
+2026-06-10 11:36:29.820 +05:30 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2026-06-10 11:36:29.833 +05:30 [INF] Executed action ServiceCenterService.Controllers.ServiceCenterController.Get (ServiceCenterService) in 2505.563ms
+2026-06-10 11:36:29.838 +05:30 [INF] Executed endpoint 'ServiceCenterService.Controllers.ServiceCenterController.Get (ServiceCenterService)'
+2026-06-10 11:36:29.856 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5268/api/servicecenter - 404 null text/plain; charset=utf-8 2856.4868ms
+2026-06-10 11:37:07.295 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5268/api/servicecenter - application/json 89
+2026-06-10 11:37:07.317 +05:30 [INF] Executing endpoint 'ServiceCenterService.Controllers.ServiceCenterController.Post (ServiceCenterService)'
+2026-06-10 11:37:07.335 +05:30 [INF] Route matched with {action = "Post", controller = "ServiceCenter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(ServiceCenterService.DTO.ServiceCenterDTO) on controller ServiceCenterService.Controllers.ServiceCenterController (ServiceCenterService).
+2026-06-10 11:37:07.426 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-06-10 11:37:07.484 +05:30 [INF] Executed action ServiceCenterService.Controllers.ServiceCenterController.Post (ServiceCenterService) in 144.9228ms
+2026-06-10 11:37:07.488 +05:30 [INF] Executed endpoint 'ServiceCenterService.Controllers.ServiceCenterController.Post (ServiceCenterService)'
+2026-06-10 11:37:07.490 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5268/api/servicecenter - 400 null application/problem+json; charset=utf-8 195.5576ms
+2026-06-10 11:37:24.635 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5268/api/servicecenter - application/json 120
+2026-06-10 11:37:24.646 +05:30 [INF] Executing endpoint 'ServiceCenterService.Controllers.ServiceCenterController.Post (ServiceCenterService)'
+2026-06-10 11:37:24.649 +05:30 [INF] Route matched with {action = "Post", controller = "ServiceCenter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(ServiceCenterService.DTO.ServiceCenterDTO) on controller ServiceCenterService.Controllers.ServiceCenterController (ServiceCenterService).
+2026-06-10 11:37:24.821 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [ServiceCenters] AS [s]
+2026-06-10 11:37:25.077 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 20) (DbType = AnsiString), @p1='?' (Size = 10) (DbType = AnsiString), @p2='?' (Size = 100), @p3='?' (Size = 100), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [ServiceCenters] ([ServiceCenterID], [Contact], [Location], [Name], [OwnerId], [ServiceDescription])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-06-10 11:37:25.100 +05:30 [INF] ServiceCenter Nandini Motors created for OwnerId Nan_003
+2026-06-10 11:37:25.123 +05:30 [INF] Start processing HTTP request POST http://localhost:5242/api/owner/addServiceCenter
+2026-06-10 11:37:25.131 +05:30 [INF] Sending HTTP request POST http://localhost:5242/api/owner/addServiceCenter
+2026-06-10 11:37:25.296 +05:30 [INF] Received HTTP response headers after 157.985ms - 200
+2026-06-10 11:37:25.299 +05:30 [INF] End processing HTTP request after 178.9182ms - 200
+2026-06-10 11:37:25.302 +05:30 [INF] Executing OkObjectResult, writing value of type 'ServiceCenterService.Models.ServiceCenter'.
+2026-06-10 11:37:25.310 +05:30 [INF] Executed action ServiceCenterService.Controllers.ServiceCenterController.Post (ServiceCenterService) in 655.2034ms
+2026-06-10 11:37:25.313 +05:30 [INF] Executed endpoint 'ServiceCenterService.Controllers.ServiceCenterController.Post (ServiceCenterService)'
+2026-06-10 11:37:25.316 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5268/api/servicecenter - 200 null application/json; charset=utf-8 680.9713ms

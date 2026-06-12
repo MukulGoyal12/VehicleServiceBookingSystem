@@ -1,0 +1,120 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\2492349\\OneDrive - Cognizant\\Desktop\\VehcileServiceBooking\\VehicleService\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D0113CC3-045F-77A0-6E13-1D78790D02E3}|VehicleService.csproj|c:\\users\\2492349\\onedrive - cognizant\\desktop\\vehcileservicebooking\\vehicleservice\\controllers\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0113CC3-045F-77A0-6E13-1D78790D02E3}|VehicleService.csproj|solutionrelative:controllers\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0113CC3-045F-77A0-6E13-1D78790D02E3}|VehicleService.csproj|c:\\users\\2492349\\onedrive - cognizant\\desktop\\vehcileservicebooking\\vehicleservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0113CC3-045F-77A0-6E13-1D78790D02E3}|VehicleService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0113CC3-045F-77A0-6E13-1D78790D02E3}|VehicleService.csproj|c:\\users\\2492349\\onedrive - cognizant\\desktop\\vehcileservicebooking\\vehicleservice\\services\\ivehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0113CC3-045F-77A0-6E13-1D78790D02E3}|VehicleService.csproj|solutionrelative:services\\ivehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0113CC3-045F-77A0-6E13-1D78790D02E3}|VehicleService.csproj|c:\\users\\2492349\\onedrive - cognizant\\desktop\\vehcileservicebooking\\vehicleservice\\services\\vehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0113CC3-045F-77A0-6E13-1D78790D02E3}|VehicleService.csproj|solutionrelative:services\\vehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0113CC3-045F-77A0-6E13-1D78790D02E3}|VehicleService.csproj|c:\\users\\2492349\\onedrive - cognizant\\desktop\\vehcileservicebooking\\vehicleservice\\models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0113CC3-045F-77A0-6E13-1D78790D02E3}|VehicleService.csproj|solutionrelative:models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EE91382-FA03-5392-C562-CF6D49210A67}|..\\..\\..\\..\\Downloads\\Major_Project\\Major_Project\\Major_Project\\UserService\\UserService.csproj|c:\\users\\2492349\\downloads\\major_project\\major_project\\major_project\\userservice\\models\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IVehicleService.cs",
+              "DocumentMoniker": "C:\\Users\\2492349\\OneDrive - Cognizant\\Desktop\\VehcileServiceBooking\\VehicleService\\Services\\IVehicleService.cs",
+              "RelativeDocumentMoniker": "Services\\IVehicleService.cs",
+              "ToolTip": "C:\\Users\\2492349\\OneDrive - Cognizant\\Desktop\\VehcileServiceBooking\\VehicleService\\Services\\IVehicleService.cs",
+              "RelativeToolTip": "Services\\IVehicleService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T03:41:20.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VehicleService.cs",
+              "DocumentMoniker": "C:\\Users\\2492349\\OneDrive - Cognizant\\Desktop\\VehcileServiceBooking\\VehicleService\\Services\\VehicleService.cs",
+              "RelativeDocumentMoniker": "Services\\VehicleService.cs",
+              "ToolTip": "C:\\Users\\2492349\\OneDrive - Cognizant\\Desktop\\VehcileServiceBooking\\VehicleService\\Services\\VehicleService.cs",
+              "RelativeToolTip": "Services\\VehicleService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T03:41:16.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\2492349\\OneDrive - Cognizant\\Desktop\\VehcileServiceBooking\\VehicleService\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\2492349\\OneDrive - Cognizant\\Desktop\\VehcileServiceBooking\\VehicleService\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAUwBQAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T03:39:48.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserContext.cs",
+              "DocumentMoniker": "C:\\Users\\2492349\\Downloads\\Major_Project\\Major_Project\\Major_Project\\UserService\\Models\\UserContext.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\Major_Project\\Major_Project\\Major_Project\\UserService\\Models\\UserContext.cs",
+              "ToolTip": "C:\\Users\\2492349\\Downloads\\Major_Project\\Major_Project\\Major_Project\\UserService\\Models\\UserContext.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\Major_Project\\Major_Project\\Major_Project\\UserService\\Models\\UserContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T18:03:04.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VehicleController.cs",
+              "DocumentMoniker": "C:\\Users\\2492349\\OneDrive - Cognizant\\Desktop\\VehcileServiceBooking\\VehicleService\\Controllers\\VehicleController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VehicleController.cs",
+              "ToolTip": "C:\\Users\\2492349\\OneDrive - Cognizant\\Desktop\\VehcileServiceBooking\\VehicleService\\Controllers\\VehicleController.cs",
+              "RelativeToolTip": "Controllers\\VehicleController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T17:57:33.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Vehicle.cs",
+              "DocumentMoniker": "C:\\Users\\2492349\\OneDrive - Cognizant\\Desktop\\VehcileServiceBooking\\VehicleService\\Models\\Vehicle.cs",
+              "RelativeDocumentMoniker": "Models\\Vehicle.cs",
+              "ToolTip": "C:\\Users\\2492349\\OneDrive - Cognizant\\Desktop\\VehcileServiceBooking\\VehicleService\\Models\\Vehicle.cs",
+              "RelativeToolTip": "Models\\Vehicle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T17:57:26.126Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
