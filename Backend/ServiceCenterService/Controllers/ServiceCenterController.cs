@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ServiceCenterService.DTO;
+using ServiceCenterService.Helpers;
 using ServiceCenterService.Services;
 
 namespace ServiceCenterService.Controllers
@@ -18,21 +19,28 @@ namespace ServiceCenterService.Controllers
             _httpClientFactory = httpClientFactory;
         }
 
-        [HttpGet()]
+        private IActionResult StatusCodeFromResponse<T>(ApiResponse<T> response)
+        {
+            return response.Status switch
+            {
+                "Success" => Ok(response),
+                "Failed" => BadRequest(response),
+                "Error" => StatusCode(500, response),
+                _ => StatusCode(500, response)
+            };
+        }
+
+        [HttpGet]
         [Authorize]
         public async Task<IActionResult> Get()
         {
             var ownerId = User.FindFirst("id")?.Value;
             if (string.IsNullOrEmpty(ownerId))
-                return Unauthorized("OwnerId not found in token.");
+                return Unauthorized(ResponseFactory.Failed<string>("OwnerId not found in token."));
 
-            var centers = await _service.GetByOwnerIdAsync(ownerId);
-            if (centers == null || centers.Count == 0)
-                return NotFound("No service centers found for this user.");
-
-            return Ok(centers);
+            var response = await _service.GetByOwnerIdAsync(ownerId);
+            return StatusCodeFromResponse(response);
         }
-
 
         [HttpGet("{id}")]
         [Authorize]
@@ -40,15 +48,11 @@ namespace ServiceCenterService.Controllers
         {
             var ownerId = User.FindFirst("id")?.Value;
             if (string.IsNullOrEmpty(ownerId))
-                return Unauthorized("OwnerId not found in token.");
+                return Unauthorized(ResponseFactory.Failed<string>("OwnerId not found in token."));
 
-            var serviceCenter = await _service.GetByIdForOwnerAsync(id, ownerId);
-            if (serviceCenter == null)
-                return NotFound("Service center not found for this user.");
-
-            return Ok(serviceCenter);
+            var response = await _service.GetByIdForOwnerAsync(id, ownerId);
+            return StatusCodeFromResponse(response);
         }
-
 
         [HttpPost]
         [Authorize]
@@ -56,21 +60,23 @@ namespace ServiceCenterService.Controllers
         {
             var ownerId = User.FindFirst("id")?.Value;
             if (string.IsNullOrEmpty(ownerId))
-                return Unauthorized("OwnerId not found in token.");
+                return Unauthorized(ResponseFactory.Failed<string>("OwnerId not found in token."));
 
-            var newServiceCenter = await _service.CreateAsync(dto, ownerId);
+            var response = await _service.CreateAsync(dto, ownerId);
+            if (response.Status != "Success")
+                return StatusCodeFromResponse(response);
 
             // HttpClient call to OwnerService
             var client = _httpClientFactory.CreateClient();
             client.BaseAddress = new Uri("http://localhost:5242");
 
-            var payload = new { OwnerId = ownerId, ServiceCenterId = newServiceCenter.ServiceCenterID };
-            var response = await client.PostAsJsonAsync("/api/owner/addServiceCenter", payload);
+            var payload = new { OwnerId = ownerId, ServiceCenterId = response.Data!.ServiceCenterID };
+            var ownerResponse = await client.PostAsJsonAsync("/api/owner/addServiceCenter", payload);
 
-            if (!response.IsSuccessStatusCode)
-                return StatusCode((int)response.StatusCode, "Failed to update OwnerService");
+            if (!ownerResponse.IsSuccessStatusCode)
+                return StatusCode((int)ownerResponse.StatusCode, ResponseFactory.Failed<string>("Failed to update OwnerService"));
 
-            return Ok(newServiceCenter);
+            return StatusCodeFromResponse(response);
         }
 
         [HttpPatch("{id}")]
@@ -79,14 +85,11 @@ namespace ServiceCenterService.Controllers
         {
             var ownerId = User.FindFirst("id")?.Value;
             if (string.IsNullOrEmpty(ownerId))
-                return Unauthorized("OwnerId not found in token.");
+                return Unauthorized(ResponseFactory.Failed<string>("OwnerId not found in token."));
 
-            var updated = await _service.UpdateForOwnerAsync(id, dto, ownerId);
-            if (!updated) return NotFound("ServiceCenter not found for this user.");
-
-            return Ok(new { Status = "Success", Message = "ServiceCenter updated successfully" });
+            var response = await _service.UpdateForOwnerAsync(id, dto, ownerId);
+            return StatusCodeFromResponse(response);
         }
-
 
         [HttpDelete("{id}")]
         [Authorize]
@@ -94,30 +97,29 @@ namespace ServiceCenterService.Controllers
         {
             var ownerId = User.FindFirst("id")?.Value;
             if (string.IsNullOrEmpty(ownerId))
-                return Unauthorized("OwnerId not found in token.");
+                return Unauthorized(ResponseFactory.Failed<string>("OwnerId not found in token."));
 
-            var deleted = await _service.DeleteForOwnerAsync(id, ownerId);
-            if (!deleted) return NotFound("ServiceCenter not found for this user.");
+            var response = await _service.DeleteForOwnerAsync(id, ownerId);
+            if (response.Status != "Success")
+                return StatusCodeFromResponse(response);
 
             var client = _httpClientFactory.CreateClient();
             client.BaseAddress = new Uri("http://localhost:5242");
 
             var payload = new { OwnerId = ownerId, ServiceCenterId = id };
-            var response = await client.PostAsJsonAsync("/api/owner/removeServiceCenter", payload);
+            var ownerResponse = await client.PostAsJsonAsync("/api/owner/removeServiceCenter", payload);
 
-            if (!response.IsSuccessStatusCode)
-                return StatusCode((int)response.StatusCode, "Failed to update OwnerService");
+            if (!ownerResponse.IsSuccessStatusCode)
+                return StatusCode((int)ownerResponse.StatusCode, ResponseFactory.Failed<string>("Failed to update OwnerService"));
 
-            return Ok(new { Status = "Success", Message = "ServiceCenter deleted and Owner updated successfully" });
+            return StatusCodeFromResponse(ResponseFactory.Success("ServiceCenter deleted and Owner updated successfully", id));
         }
-
 
         [HttpDelete("deleteByOwner/{ownerId}")]
         public async Task<IActionResult> DeleteByOwner(string ownerId)
         {
-            var deleted = await _service.DeleteByOwnerAsync(ownerId.ToString());
-            if (!deleted) return NotFound("No ServiceCenters found for this Owner");
-            return Ok(new { Status = "Success", Message = "All ServiceCenters deleted for Owner" });
+            var response = await _service.DeleteByOwnerAsync(ownerId);
+            return StatusCodeFromResponse(response);
         }
     }
 }

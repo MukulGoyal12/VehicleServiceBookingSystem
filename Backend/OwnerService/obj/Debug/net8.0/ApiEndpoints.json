@@ -80,6 +80,16 @@
   },
   {
     "ContainingType": "OwnerService.Controllers.OwnerController",
+    "Method": "GetOwnerHistory",
+    "RelativePath": "api/Owner/History",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OwnerService.Controllers.OwnerController",
     "Method": "Login",
     "RelativePath": "api/Owner/login",
     "HttpMethod": "POST",

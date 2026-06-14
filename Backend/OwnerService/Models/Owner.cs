@@ -25,6 +25,10 @@ namespace OwnerService.Models
         [Required]
         [StringLength(256, ErrorMessage = "Password hash length exceeded.")]
         public string Password { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public IList<string> ServiceCenterIds { get; set; } = new List<string>();
+        public enum OwnerStatus { Inactive, Active }
+        public OwnerStatus Status { get; set; } = OwnerStatus.Active;
+
     }
 }

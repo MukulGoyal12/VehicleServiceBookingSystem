@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using ServiceCenterService.Services;
 using ServiceCenterService.Models;
 using ServiceCenterService.DTO;
+using ServiceCenterService.Helpers;
 using System.Threading.Tasks;
 using System.Linq;
 
@@ -37,32 +38,37 @@ namespace VehicleBookingSystem.Tests
         {
             var dto = new ServiceCenterDTO
             {
-                Name = "Center1",
-                Location = "Chennai",
+                CenterName = "Center1",
+                City = "Chennai",
                 Contact = "1234567890",
                 ServiceDescription = "General Service"
             };
             var result = await _service.CreateAsync(dto, "owner1");
 
-            Assert.IsNotNull(result);
-            Assert.AreEqual("Center1", result.Name);
+            Assert.AreEqual("Success", result.Status);
+            Assert.IsNotNull(result.Data);
+            Assert.AreEqual("Center1", result.Data.CenterName);
             Assert.AreEqual(1, _context.ServiceCenters.Count());
         }
 
         [Test]
-        public async Task CreateAsync_ShouldReturnNull_OnException_Negative()
+        public async Task CreateAsync_ShouldReturnFailed_OnDuplicate_Negative()
         {
-            _context.Dispose(); // force exception
             var dto = new ServiceCenterDTO
             {
-                Name = "CenterX",
-                Location = "Delhi",
+                CenterName = "CenterX",
+                City = "Delhi",
+                Street = "Street1",
+                Pincode = "110001",
                 Contact = "9999999999",
                 ServiceDescription = "Repair Service"
             };
-            var result = await _service.CreateAsync(dto, "ownerX");
 
-            Assert.IsNull(result);
+            await _service.CreateAsync(dto, "ownerX"); // first insert
+            var result = await _service.CreateAsync(dto, "ownerX"); // duplicate
+
+            Assert.AreEqual("Failed", result.Status);
+            Assert.IsNull(result.Data);
         }
 
         [Test]
@@ -70,8 +76,8 @@ namespace VehicleBookingSystem.Tests
         {
             var dto = new ServiceCenterDTO
             {
-                Name = "Center2",
-                Location = "Mumbai",
+                CenterName = "Center2",
+                City = "Mumbai",
                 Contact = "1111111111",
                 ServiceDescription = "Tyre Service"
             };
@@ -79,15 +85,18 @@ namespace VehicleBookingSystem.Tests
 
             var result = await _service.GetByOwnerIdAsync("owner2");
 
-            Assert.IsNotEmpty(result);
-            Assert.AreEqual("Center2", result.First().Name);
+            Assert.AreEqual("Success", result.Status);
+            Assert.IsNotEmpty(result.Data);
+            Assert.AreEqual("Center2", result.Data.First().CenterName);
         }
 
         [Test]
-        public async Task GetByOwnerIdAsync_ShouldReturnEmpty_Negative()
+        public async Task GetByOwnerIdAsync_ShouldReturnFailed_Negative()
         {
             var result = await _service.GetByOwnerIdAsync("unknownOwner");
-            Assert.IsEmpty(result);
+
+            Assert.AreEqual("Failed", result.Status);
+            Assert.IsNull(result.Data);
         }
 
         [Test]
@@ -95,24 +104,27 @@ namespace VehicleBookingSystem.Tests
         {
             var dto = new ServiceCenterDTO
             {
-                Name = "Center3",
-                Location = "Hyd",
+                CenterName = "Center3",
+                City = "Hyd",
                 Contact = "2222222222",
                 ServiceDescription = "Engine Service"
             };
             var sc = await _service.CreateAsync(dto, "owner3");
 
-            var result = await _service.GetByIdForOwnerAsync(sc.ServiceCenterID, "owner3");
+            var result = await _service.GetByIdForOwnerAsync(sc.Data.ServiceCenterID, "owner3");
 
-            Assert.IsNotNull(result);
-            Assert.AreEqual("Center3", result.Name);
+            Assert.AreEqual("Success", result.Status);
+            Assert.IsNotNull(result.Data);
+            Assert.AreEqual("Center3", result.Data.CenterName);
         }
 
         [Test]
-        public async Task GetByIdForOwnerAsync_ShouldReturnNull_Negative()
+        public async Task GetByIdForOwnerAsync_ShouldReturnFailed_Negative()
         {
             var result = await _service.GetByIdForOwnerAsync("Muk_999", "ownerX");
-            Assert.IsNull(result);
+
+            Assert.AreEqual("Failed", result.Status);
+            Assert.IsNull(result.Data);
         }
 
         [Test]
@@ -120,86 +132,94 @@ namespace VehicleBookingSystem.Tests
         {
             var dto = new ServiceCenterDTO
             {
-                Name = "Center4",
-                Location = "Pune",
+                CenterName = "Center4",
+                City = "Pune",
                 Contact = "3333333333",
                 ServiceDescription = "Brake Service"
             };
             var sc = await _service.CreateAsync(dto, "owner4");
 
-            var updateDto = new ServiceCenterDTO { Name = "UpdatedCenter4", ServiceDescription = "Updated Service" };
-            var result = await _service.UpdateForOwnerAsync(sc.ServiceCenterID, updateDto, "owner4");
+            var updateDto = new ServiceCenterDTO { CenterName = "UpdatedCenter4", ServiceDescription = "Updated Service" };
+            var result = await _service.UpdateForOwnerAsync(sc.Data.ServiceCenterID, updateDto, "owner4");
 
-            Assert.IsTrue(result);
-            Assert.AreEqual("UpdatedCenter4", _context.ServiceCenters.First().Name);
+            Assert.AreEqual("Success", result.Status);
+            Assert.IsTrue(result.Data);
+            Assert.AreEqual("UpdatedCenter4", _context.ServiceCenters.First().CenterName);
         }
 
         [Test]
-        public async Task UpdateForOwnerAsync_ShouldReturnFalse_Negative()
+        public async Task UpdateForOwnerAsync_ShouldReturnFailed_Negative()
         {
-            var dto = new ServiceCenterDTO { Name = "DoesNotExist", ServiceDescription = "Dummy" };
+            var dto = new ServiceCenterDTO { CenterName = "DoesNotExist", ServiceDescription = "Dummy" };
             var result = await _service.UpdateForOwnerAsync("Muk_999", dto, "ownerX");
 
-            Assert.IsFalse(result);
+            Assert.AreEqual("Failed", result.Status);
+            Assert.IsFalse(result.Data);
         }
 
         [Test]
-        public async Task DeleteAsync_ShouldDeleteServiceCenter_Positive()
+        public async Task DeleteAsync_ShouldMarkInactive_Positive()
         {
             var dto = new ServiceCenterDTO
             {
-                Name = "Center5",
-                Location = "Delhi",
+                CenterName = "Center5",
+                City = "Delhi",
                 Contact = "4444444444",
                 ServiceDescription = "Oil Change"
             };
             var sc = await _service.CreateAsync(dto, "owner5");
 
-            var result = await _service.DeleteAsync(sc.ServiceCenterID);
+            var result = await _service.DeleteAsync(sc.Data.ServiceCenterID);
 
-            Assert.IsTrue(result);
-            Assert.AreEqual(0, _context.ServiceCenters.Count());
+            Assert.AreEqual("Success", result.Status);
+            Assert.IsTrue(result.Data);
+            Assert.AreEqual(ServiceCenter.CenterStatus.Inactive, _context.ServiceCenters.First().Status);
         }
 
         [Test]
-        public async Task DeleteAsync_ShouldReturnFalse_Negative()
+        public async Task DeleteAsync_ShouldReturnFailed_Negative()
         {
             var result = await _service.DeleteAsync("Muk_999");
-            Assert.IsFalse(result);
+
+            Assert.AreEqual("Failed", result.Status);
+            Assert.IsFalse(result.Data);
         }
 
         [Test]
-        public async Task DeleteForOwnerAsync_ShouldDeleteServiceCenter_Positive()
+        public async Task DeleteForOwnerAsync_ShouldMarkInactive_Positive()
         {
             var dto = new ServiceCenterDTO
             {
-                Name = "Center6",
-                Location = "Delhi",
+                CenterName = "Center6",
+                City = "Delhi",
                 Contact = "5555555555",
                 ServiceDescription = "Battery Service"
             };
             var sc = await _service.CreateAsync(dto, "owner6");
 
-            var result = await _service.DeleteForOwnerAsync(sc.ServiceCenterID, "owner6");
+            var result = await _service.DeleteForOwnerAsync(sc.Data.ServiceCenterID, "owner6");
 
-            Assert.IsTrue(result);
-            Assert.AreEqual(0, _context.ServiceCenters.Count());
+            Assert.AreEqual("Success", result.Status);
+            Assert.IsTrue(result.Data);
+            Assert.AreEqual(ServiceCenter.CenterStatus.Inactive, _context.ServiceCenters.First().Status);
         }
 
         [Test]
-        public async Task DeleteForOwnerAsync_ShouldReturnFalse_Negative()
+        public async Task DeleteForOwnerAsync_ShouldReturnFailed_Negative()
         {
             var result = await _service.DeleteForOwnerAsync("Muk_999", "ownerX");
-            Assert.IsFalse(result);
+
+            Assert.AreEqual("Failed", result.Status);
+            Assert.IsFalse(result.Data);
         }
 
         [Test]
-        public async Task DeleteByOwnerAsync_ShouldDeleteAllServiceCenters_Positive()
+        public async Task DeleteByOwnerAsync_ShouldMarkAllInactive_Positive()
         {
             var dto1 = new ServiceCenterDTO
             {
-                Name = "Center7",
-                Location = "Delhi",
+                CenterName = "Center7",
+                City = "Delhi",
                 Contact = "6666666666",
                 ServiceDescription = "Full Service"
             };
@@ -207,8 +227,8 @@ namespace VehicleBookingSystem.Tests
 
             var dto2 = new ServiceCenterDTO
             {
-                Name = "Center8",
-                Location = "Delhi",
+                CenterName = "Center8",
+                City = "Delhi",
                 Contact = "7777777777",
                 ServiceDescription = "Quick Service"
             };
@@ -216,15 +236,18 @@ namespace VehicleBookingSystem.Tests
 
             var result = await _service.DeleteByOwnerAsync("owner7");
 
-            Assert.IsTrue(result);
-            Assert.AreEqual(0, _context.ServiceCenters.Count());
+            Assert.AreEqual("Success", result.Status);
+            Assert.IsTrue(result.Data);
+            Assert.IsTrue(_context.ServiceCenters.All(sc => sc.Status == ServiceCenter.CenterStatus.Inactive));
         }
 
         [Test]
-        public async Task DeleteByOwnerAsync_ShouldReturnFalse_Negative()
+        public async Task DeleteByOwnerAsync_ShouldReturnFailed_Negative()
         {
             var result = await _service.DeleteByOwnerAsync("unknownOwner");
-            Assert.IsFalse(result);
+
+            Assert.AreEqual("Failed", result.Status);
+            Assert.IsFalse(result.Data);
         }
     }
 }

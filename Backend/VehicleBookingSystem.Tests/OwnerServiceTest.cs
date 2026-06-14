@@ -9,6 +9,9 @@ using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using ServiceCenterService.DTO;
+using System.Linq;
+using System.Net.Http;
+using System.Threading;
 
 namespace VehicleBookingSystem.Tests
 {
@@ -23,9 +26,8 @@ namespace VehicleBookingSystem.Tests
         public void Setup()
         {
             var options = new DbContextOptionsBuilder<OwnerContext>()
-            .UseInMemoryDatabase(Guid.NewGuid().ToString())
-            .Options;
-
+                .UseInMemoryDatabase(Guid.NewGuid().ToString())
+                .Options;
 
             _context = new OwnerContext(options);
             _httpClientFactory = new Mock<IHttpClientFactory>();
@@ -41,14 +43,15 @@ namespace VehicleBookingSystem.Tests
             _context.Dispose();
         }
 
-
         [Test]
         public void RegisterOwner_ShouldAddNewOwner_Positive()
         {
             var dto = new OwnerDTO { Name = "Test", Email = "test@test.com", Phone = "123", Password = "pass" };
             var result = _service.RegisterOwner(dto);
 
-            Assert.AreEqual("Owner Register Successfully", result);
+            Assert.AreEqual("Success", result.Status);
+            Assert.AreEqual("Owner Register Successfully", result.Message);
+            Assert.IsNotNull(result.Data); // OwnerId returned
             Assert.IsTrue(_context.Owners.Any(o => o.Email == "test@test.com"));
         }
 
@@ -59,7 +62,9 @@ namespace VehicleBookingSystem.Tests
             _service.RegisterOwner(dto);
 
             var result = _service.RegisterOwner(dto);
-            Assert.AreEqual("Owner Already Exists", result);
+
+            Assert.AreEqual("Failed", result.Status);
+            Assert.AreEqual("Owner Already Exists", result.Message);
         }
 
         [Test]
@@ -69,10 +74,11 @@ namespace VehicleBookingSystem.Tests
             _service.RegisterOwner(dto);
 
             var login = new LoginModel { Email = "wrong@test.com", Password = "bad" };
-            var result = _service.Login(login, out string token);
+            var result = _service.Login(login);
 
-            Assert.AreEqual("Invalid credentials", result);
-            Assert.IsEmpty(token);
+            Assert.AreEqual("Failed", result.Status);
+            Assert.AreEqual("Invalid credentials", result.Message);
+            Assert.IsNull(result.Data); // token not returned
         }
 
         [Test]
@@ -84,15 +90,19 @@ namespace VehicleBookingSystem.Tests
 
             var result = _service.GetOwnerById(owner.OwnerId);
 
-            Assert.IsNotNull(result);
-            Assert.AreEqual("Test", result.Name);
+            Assert.AreEqual("Success", result.Status);
+            Assert.AreEqual("Owner fetched successfully", result.Message);
+            Assert.AreEqual("Test", result.Data.Name);
         }
 
         [Test]
-        public void GetOwnerById_ShouldReturnNull_Negative()
+        public void GetOwnerById_ShouldReturnFailed_Negative()
         {
             var result = _service.GetOwnerById("Muk_999");
-            Assert.IsNull(result);
+
+            Assert.AreEqual("Failed", result.Status);
+            Assert.AreEqual("Owner not found or inactive", result.Message);
+            Assert.IsNull(result.Data);
         }
 
         [Test]
@@ -105,7 +115,8 @@ namespace VehicleBookingSystem.Tests
             var updated = new OwnerDTO { Name = "UpdatedName" };
             var result = _service.UpdateOwner(owner.OwnerId, updated);
 
-            Assert.AreEqual("Owner updated successfully", result);
+            Assert.AreEqual("Success", result.Status);
+            Assert.AreEqual("Owner updated successfully", result.Message);
             Assert.AreEqual("UpdatedName", _context.Owners.First().Name);
         }
 
@@ -115,7 +126,8 @@ namespace VehicleBookingSystem.Tests
             var updated = new OwnerDTO { Name = "UpdatedName" };
             var result = _service.UpdateOwner("Muk_999", updated);
 
-            Assert.AreEqual("Owner not found", result);
+            Assert.AreEqual("Failed", result.Status);
+            Assert.AreEqual("Owner not found", result.Message);
         }
 
         [Test]
@@ -131,15 +143,18 @@ namespace VehicleBookingSystem.Tests
 
             var result = await _service.DeleteOwner(owner.OwnerId);
 
-            Assert.AreEqual("Owner and linked ServiceCenters deleted successfully", result);
-            Assert.AreEqual(0, _context.Owners.Count());
+            Assert.AreEqual("Success", result.Status);
+            Assert.AreEqual("Owner and linked ServiceCenters deleted successfully", result.Message);
+            Assert.AreEqual(owner.OwnerId, result.Data);
         }
 
         [Test]
         public async Task DeleteOwner_ShouldReturnNotFound_Negative()
         {
             var result = await _service.DeleteOwner("Muk_999");
-            Assert.AreEqual("Owner not found", result);
+
+            Assert.AreEqual("Failed", result.Status);
+            Assert.AreEqual("Owner not found", result.Message);
         }
 
         [Test]
@@ -152,7 +167,9 @@ namespace VehicleBookingSystem.Tests
             var payload = new AddServiceCenterDTO { OwnerId = owner.OwnerId, ServiceCenterId = "SC_101" };
             var result = _service.AddServiceCenter(payload);
 
-            Assert.AreEqual("ServiceCenter linked to Owner successfully", result);
+            Assert.AreEqual("Success", result.Status);
+            Assert.AreEqual("ServiceCenter linked to Owner successfully", result.Message);
+            Assert.AreEqual("SC_101", result.Data);
             Assert.Contains("SC_101", (System.Collections.ICollection?)owner.ServiceCenterIds);
         }
 
@@ -169,7 +186,9 @@ namespace VehicleBookingSystem.Tests
             var payload = new AddServiceCenterDTO { OwnerId = owner.OwnerId, ServiceCenterId = "SC_202" };
             var result = _service.RemoveServiceCenter(payload);
 
-            Assert.AreEqual("ServiceCenter removed from Owner successfully", result);
+            Assert.AreEqual("Success", result.Status);
+            Assert.AreEqual("ServiceCenter removed from Owner successfully", result.Message);
+            Assert.AreEqual("SC_202", result.Data);
             Assert.IsFalse(owner.ServiceCenterIds.Contains("SC_202"));
         }
     }

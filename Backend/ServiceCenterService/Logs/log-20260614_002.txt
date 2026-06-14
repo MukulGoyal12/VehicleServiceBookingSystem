@@ -1,0 +1,15 @@
+2026-06-14 10:32:55.166 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-14 10:32:55.187 +05:30 [INF] Hosting environment: Development
+2026-06-14 10:32:55.192 +05:30 [INF] Content root path: C:\Users\2492274\OneDrive - Cognizant\Desktop\Project\Backend\ServiceCenterService
+2026-06-14 10:33:28.690 +05:30 [INF] User profile is available. Using 'C:\Users\2492274\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-14 10:33:28.905 +05:30 [INF] Now listening on: http://localhost:5268
+2026-06-14 10:33:30.087 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5268/weatherforecast - null null
+2026-06-14 10:33:31.440 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5268/weatherforecast - 404 null null 1355.9856ms
+2026-06-14 10:33:31.457 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5268/weatherforecast, Response status code: 404
+2026-06-14 10:33:37.722 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5268/api/servicecenter - application/json 908
+2026-06-14 10:33:37.803 +05:30 [INF] Executing endpoint 'ServiceCenterService.Controllers.ServiceCenterController.Post (ServiceCenterService)'
+2026-06-14 10:33:37.846 +05:30 [INF] Route matched with {action = "Post", controller = "ServiceCenter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(ServiceCenterService.DTO.ServiceCenterDTO) on controller ServiceCenterService.Controllers.ServiceCenterController (ServiceCenterService).
+2026-06-14 10:33:38.028 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-06-14 10:33:38.059 +05:30 [INF] Executed action ServiceCenterService.Controllers.ServiceCenterController.Post (ServiceCenterService) in 207.1673ms
+2026-06-14 10:33:38.061 +05:30 [INF] Executed endpoint 'ServiceCenterService.Controllers.ServiceCenterController.Post (ServiceCenterService)'
+2026-06-14 10:33:38.064 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5268/api/servicecenter - 400 null application/problem+json; charset=utf-8 342.1268ms

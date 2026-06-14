@@ -1,13 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using OwnerService.DTO;
-using OwnerService.Helpers;
 using OwnerService.Models;
 using OwnerService.Services;
 using ServiceCenterService.DTO;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace OwnerService.Controllers
 {
@@ -23,61 +18,76 @@ namespace OwnerService.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get() => Ok(_ownerService.GetAllOwners());
+        public IActionResult Get()
+        {
+            var response = _ownerService.GetAllOwners();
+            return StatusCodeFromResponse(response);
+        }
+
+        [HttpGet("History")]
+        public IActionResult GetOwnerHistory()
+        {
+            var response = _ownerService.GetOwnersHistory();
+            return StatusCodeFromResponse(response);
+        }
 
         [HttpPost("register")]
         public IActionResult Register([FromBody] OwnerDTO owner)
         {
-            var result = _ownerService.RegisterOwner(owner);
-            return Ok(new { Status = "Success", Message = result });
+            var response = _ownerService.RegisterOwner(owner);
+            return StatusCodeFromResponse(response);
         }
 
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginModel login)
         {
-            var result = _ownerService.Login(login, out string token);
-            if (result != "Success") return Unauthorized(new { Status = "Failed", Message = result });
-            return Ok(new { Status = "Success", Token = token });
+            var response = _ownerService.Login(login);
+            return StatusCodeFromResponse(response);
         }
 
         [HttpGet("{id}")]
         public IActionResult GetById(string id)
         {
-            var owner = _ownerService.GetOwnerById(id);
-            if (owner == null) return NotFound("Owner not found");
-            return Ok(owner);
+            var response = _ownerService.GetOwnerById(id);
+            return StatusCodeFromResponse(response);
         }
 
         [HttpPatch("{id}")]
         public IActionResult Patch(string id, [FromBody] OwnerDTO updatedOwner)
         {
-            var result = _ownerService.UpdateOwner(id, updatedOwner);
-            if (result == "Owner not found") return NotFound(result);
-            if (result.StartsWith("Something went wrong")) return StatusCode(500, result);
-
-            return Ok(new { Status = "Success", Message = result });
-        } 
+            var response = _ownerService.UpdateOwner(id, updatedOwner);
+            return StatusCodeFromResponse(response);
+        }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(string id)
         {
-            var result = await _ownerService.DeleteOwner(id);
-            if (result == "Owner not found") return NotFound(result);
-            return Ok(new { Status = "Success", Message = result });
+            var response = await _ownerService.DeleteOwner(id);
+            return StatusCodeFromResponse(response);
         }
 
         [HttpPost("addServiceCenter")]
         public IActionResult AddServiceCenter([FromBody] AddServiceCenterDTO payload)
         {
-            var result = _ownerService.AddServiceCenter(payload);
-            return Ok(new { Status = "Success", Message = result });
+            var response = _ownerService.AddServiceCenter(payload);
+            return StatusCodeFromResponse(response);
         }
 
         [HttpPost("removeServiceCenter")]
         public IActionResult RemoveServiceCenter([FromBody] AddServiceCenterDTO payload)
         {
-            var result = _ownerService.RemoveServiceCenter(payload);
-            return Ok(new { Status = "Success", Message = result });
+            var response = _ownerService.RemoveServiceCenter(payload);
+            return StatusCodeFromResponse(response);
+        }
+        private IActionResult StatusCodeFromResponse<T>(ApiResponse<T> response)
+        {
+            return response.Status switch
+            {
+                "Success" => Ok(response),
+                "Failed" => BadRequest(response),
+                "Error" => StatusCode(500, response),
+                _ => StatusCode(500, response)
+            };
         }
     }
 }
